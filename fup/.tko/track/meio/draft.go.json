@@ -1,0 +1,36 @@
+{
+    "patches": [
+        {
+            "label": "2025-04-27_23-39-30",
+            "content": "@@ -183,25 +183,8 @@\n lse \n-if c %3C a && c %3E b\n %7B%0A%09%09\n"
+        },
+        {
+            "label": "2025-04-27_23-40-20",
+            "content": "@@ -226,21 +226,8 @@\n  c)%0A\n-%09%7D else %7B%0A%09%09%0A\n %09%7D%0A%7D\n"
+        },
+        {
+            "label": "2025-04-27_23-40-32",
+            "content": "@@ -179,16 +179,33 @@\n %09%7D else \n+if c %3C a && c %3E b\n %7B%0A%09%09fmt.\n@@ -222,13 +222,26 @@\n %5Cn%22, c)%0A\n+%09%7D else %7B%0A%09%09%0A\n %09%7D%0A%7D%0A\n"
+        },
+        {
+            "label": "2025-04-27_23-41-14",
+            "content": "@@ -84,17 +84,17 @@\n f a \n-%3E\n+%3C\n  b && a \n %3C c \n@@ -89,17 +89,17 @@\n  b && a \n-%3C\n+%3E\n  c %7B%0A%09%09f\n@@ -136,17 +136,17 @@\n f b \n-%3E\n+%3C\n  a && b \n %3C c \n@@ -141,17 +141,17 @@\n  a && b \n-%3C\n+%3E\n  c %7B%0A%09%09f\n"
+        },
+        {
+            "label": "2025-04-27_23-42-03",
+            "content": "@@ -183,26 +183,8 @@\n lse \n-if c %3E a && c %3C b \n %7B%0A%09%09\n"
+        },
+        {
+            "label": "2025-04-27_23-42-35",
+            "content": "@@ -179,16 +179,34 @@\n %09%7D else \n+if c %3E a && c %3C b \n %7B%0A%09%09fmt.\n"
+        },
+        {
+            "label": "2025-04-27_23-42-46",
+            "content": "@@ -78,17 +78,16 @@\n c)%0A%0A%09if \n-(\n a %3E b &&\n@@ -96,30 +96,8 @@\n  %3C c\n-) %7C%7C (a %3C b && a %3E c) \n  %7B%0A%09\n@@ -130,17 +130,16 @@\n else if \n-(\n b %3E a &&\n@@ -148,30 +148,8 @@\n  %3C c\n-) %7C%7C (b %3C a && b %3E c) \n  %7B%0A%09\n"
+        },
+        {
+            "label": "2025-04-27_23-46-10",
+            "content": "package main\nimport \"fmt\"\nfunc main() {\n\tvar a, b, c int\n\n\tfmt.Scan(&a, &b, &c)\n\n\tif (a > b && a < c) || (a < b && a > c)  {\n\t\tfmt.Printf(\"%d\\n\", a)\n\t} else if (b > a && b < c) || (b < a && b > c)  {\n\t\tfmt.Printf(\"%d\\n\", b)\n\t} else {\n\t\tfmt.Printf(\"%d\\n\", c)\n\t}\n}\n"
+        }
+    ]
+}

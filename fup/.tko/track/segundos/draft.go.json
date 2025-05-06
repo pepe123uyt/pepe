@@ -1,0 +1,20 @@
+{
+    "patches": [
+        {
+            "label": "2025-04-23_02-36-14",
+            "content": "@@ -166,12 +166,17 @@\n h, m, s)\n+%0A    \n %0A%0A%7D%0A\n"
+        },
+        {
+            "label": "2025-04-23_02-37-58",
+            "content": "@@ -150,20 +150,14 @@\n f(%22%25\n-02\n d:%25\n-02\n d:%25\n-02\n d%5Cn%22\n"
+        },
+        {
+            "label": "2025-04-23_02-40-11",
+            "content": "@@ -150,14 +150,20 @@\n f(%22%25\n+02\n d:%25\n+02\n d:%25\n+02\n d%5Cn%22\n"
+        },
+        {
+            "label": "2025-04-23_02-40-35",
+            "content": "package main\n\nimport \"fmt\"\n\nfunc main() {\n\tvar total int\n\tfmt.Scan(&total)\n\n\th := total / 3600\n\tm := (total % 3600) / 60\n\ts := total % 60\n\n\tfmt.Printf(\"%d:%d:%d\\n\", h, m, s)\n\n}\n"
+        }
+    ]
+}

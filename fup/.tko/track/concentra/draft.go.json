@@ -1,0 +1,40 @@
+{
+    "patches": [
+        {
+            "label": "2025-05-05_20-18-40",
+            "content": "@@ -215,37 +215,8 @@\n   %7D%0A\n-        fmt.Println(ini, fim)\n %0A   \n"
+        },
+        {
+            "label": "2025-05-05_20-19-47",
+            "content": "@@ -148,44 +148,8 @@\n = 1%0A\n-        fmt.Println(ini, fim)%0A    %7D%0A\n     \n@@ -219,16 +219,43 @@\n         \n+fmt.Println(ini, fim)%0A    %7D\n %0A    fmt\n"
+        },
+        {
+            "label": "2025-05-05_20-20-36",
+            "content": "@@ -108,60 +108,47 @@\n    f\n-mt.Print(ini, fim)%0A    fimb := fim%0A    for %7B        \n+or %7B%0A        ini += 1 %0A        fim -= 1\n %0A   \n@@ -178,43 +178,13 @@\n im)%0A\n-%0A\n     \n-    ini += 1 %0A        fim -= 1\n+%7D\n %0A   \n@@ -251,23 +251,8 @@\n   %7D%0A\n-    %7D%0A        %0A\n     \n"
+        },
+        {
+            "label": "2025-05-05_20-24-05",
+            "content": "@@ -242,13 +242,29 @@\n ini \n-%3E\n+==\n  fim\n+ && fim == ini \n %7B%0A  \n"
+        },
+        {
+            "label": "2025-05-05_20-24-27",
+            "content": "@@ -178,20 +178,11 @@\n rint\n-f(%22%25v %25v %22, \n+ln(\n ini,\n@@ -183,24 +183,25 @@\n n(ini, fim)%0A\n+%0A\n         ini \n"
+        },
+        {
+            "label": "2025-05-05_20-25-16",
+            "content": "@@ -251,17 +251,16 @@\n ni %3E fim\n-b\n %7B%0A      \n"
+        },
+        {
+            "label": "2025-05-05_20-25-35",
+            "content": "@@ -324,14 +324,15 @@\n rintln(%22\n+ \n %5D%22)%0A%7D%0A\n"
+        },
+        {
+            "label": "2025-05-05_20-25-45",
+            "content": "@@ -99,16 +99,40 @@\n t(%22%5B %22)%0A\n+    fmt.Print(ini, fim)%0A\n     fimb\n"
+        },
+        {
+            "label": "2025-05-05_20-26-19",
+            "content": "package main\nimport \"fmt\"\nfunc main() {\n    var ini, fim int\n    fmt.Scan(&ini, &fim)\n    fmt.Print(\"[ \")\n    fimb := fim\n    for {        \n        fmt.Printf(\"%v %v \", ini, fim)\n        ini += 1 \n        fim -= 1\n        if ini > fimb{\n            break \n        }\n    }\n        \n        \n    fmt.Println(\"]\")\n}\n"
+        }
+    ]
+}

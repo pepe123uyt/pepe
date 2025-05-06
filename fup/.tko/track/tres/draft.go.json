@@ -1,0 +1,52 @@
+{
+    "patches": [
+        {
+            "label": "2025-04-16_19-05-47",
+            "content": "@@ -42,151 +42,29 @@\n     \n-n1 := 0, n2 := 0, n3 := 0;%0A%0A    fmt.Scanf(%22%25f%22, &n1);%0A    fmt.Scanf(%22%25f%22, &n2);%0A    fmt.Scanf(%22%25f%22, &n2);%0A%0A    fmt.Printf(%22%25f%22, n1 + n2 + n3);%0A\n+fmt.Println(%22qxcode%22)\n %0A%7D%0A%0A\n"
+        },
+        {
+            "label": "2025-04-16_19-11-54",
+            "content": "@@ -44,16 +44,31 @@\n   n1\n-, n2, n3\n+ := 0, n2 := 0, n3 := 0\n ;%0A%0A \n"
+        },
+        {
+            "label": "2025-04-16_19-12-47",
+            "content": "@@ -42,17 +42,8 @@\n     \n-%0A    var \n n1, \n@@ -52,12 +52,9 @@\n , n3\n- int\n+;\n %0A%0A  \n@@ -67,50 +67,73 @@\n Scan\n-(&n1, &n2\n+f(%22%25f%22, &n1);%0A    fmt.Scanf(%22%25f%22\n , &n\n-3)%0A\n+2);\n %0A    \n-soma := n1 + n2 + n34\n+fmt.Scanf(%22%25f%22, &n2);\n %0A%0A  \n@@ -143,17 +143,23 @@\n mt.Print\n-(\n+f(%22%25f%22,\n  n1 + n2\n@@ -164,16 +164,17 @@\n n2 + n3)\n+;\n %0A%0A%7D%0A%0A%0A%0A \n"
+        },
+        {
+            "label": "2025-04-16_19-24-21",
+            "content": "@@ -1,8 +1,9 @@\n+ \n package \n@@ -7,17 +7,16 @@\n ge main%0A\n-%0A\n import %22\n@@ -20,17 +20,16 @@\n t %22fmt%22%0A\n-%0A\n func mai\n@@ -34,18 +34,25 @@\n ain() %7B%0A\n-%0A%09\n+    %0A    \n var n1, \n@@ -63,17 +63,20 @@\n n3 int%0A%0A\n-%09\n+    \n fmt.Scan\n@@ -92,17 +92,20 @@\n , &n3)%0A%0A\n-%09\n+    \n soma := \n@@ -120,11 +120,15 @@\n + n3\n+4\n %0A%0A\n-%09\n+    \n fmt.\n@@ -133,16 +133,17 @@\n t.Print(\n+ \n n1 + n2 \n@@ -151,8 +151,15 @@\n  n3)%0A%0A%7D%0A\n+%0A%0A%0A %0A%0A \n"
+        },
+        {
+            "label": "2025-04-16_19-30-54",
+            "content": "@@ -117,17 +117,25 @@\n t.Print(\n-soma\n+n1 + n2 + n3\n )%0A%0A%7D%0A\n"
+        },
+        {
+            "label": "2025-04-16_19-31-05",
+            "content": "@@ -120,18 +120,9 @@\n rint\n-f(%22%25d%5Cn%22, \n+(\n soma\n"
+        },
+        {
+            "label": "2025-04-16_19-31-53",
+            "content": "@@ -131,14 +131,12 @@\n %22, soma)\n-%0A%09\n %0A%0A%7D%0A\n"
+        },
+        {
+            "label": "2025-04-21_20-52-53",
+            "content": "@@ -121,16 +121,18 @@\n intf(%22%25d\n+%5Cn\n %22, soma)\n"
+        },
+        {
+            "label": "2025-04-21_20-54-48",
+            "content": "@@ -120,10 +120,9 @@\n rint\n-ln\n+f\n (%22%25d\n"
+        },
+        {
+            "label": "2025-04-22_19-31-29",
+            "content": "@@ -116,17 +116,18 @@\n mt.Print\n-f\n+ln\n (%22%25d%22, s\n"
+        },
+        {
+            "label": "2025-04-22_19-31-38",
+            "content": "@@ -125,10 +125,8 @@\n (%22%25d\n-%5Cn\n %22, s\n"
+        },
+        {
+            "label": "2025-04-22_19-31-58",
+            "content": "package main\n\nimport \"fmt\"\n\nfunc main() {\n\n\tvar n1, n2, n3 int\n\n\tfmt.Scan(&n1, &n2, &n3)\n\n\tsoma := n1 + n2 + n3\n\n\tfmt.Printf(\"%d\\n\", soma)\n\t\n\n}\n"
+        }
+    ]
+}

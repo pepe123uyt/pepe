@@ -1,0 +1,51 @@
+remote: https://github.com/qxcodefup/arcade/blob/master/Readme.md
+version: 0.0.1
+database: database
+expanded:
+- campanha-principal
+- repositorio-de-problemas
+- missão-vetores-i
+tasks:
+  tres: '{cov:100, appr:5, auto:4, desc:0, desire:0, effort:0, idx:0}'
+  resto: '{cov:100, appr:6, auto:4, desc:0, desire:0, effort:0, idx:0}'
+  media: '{cov:100, appr:5, auto:5, desc:0, desire:0, effort:0, idx:0}'
+  sobrou: '{cov:100, appr:6, auto:5, desc:0, desire:0, effort:0, idx:0}'
+  segundos: '{cov:100, appr:5, auto:5, desc:0, desire:0, effort:0, idx:0}'
+  celsius: '{cov:100, appr:6, auto:5, desc:0, desire:0, effort:0, idx:0}'
+  pintando: '{cov:100, appr:5, auto:5, desc:0, desire:0, effort:0, idx:1}'
+  bala: '{cov:100, appr:5, auto:4, desc:0, desire:0, effort:0, idx:0}'
+  abs: '{cov:100, appr:4, auto:4, desc:0, desire:0, effort:0, idx:0}'
+  max: '{cov:100, appr:6, auto:5, desc:0, desire:0, effort:0, idx:0}'
+  ou: '{cov:100, appr:5, auto:5, desc:0, desire:0, effort:0, idx:0}'
+  positivo: '{cov:100, appr:6, auto:5, desc:0, desire:0, effort:0, idx:0}'
+  multiplo: '{cov:100, appr:6, auto:5, desc:0, desire:0, effort:0, idx:0}'
+  nulo: '{cov:100, appr:6, auto:5, desc:0, desire:0, effort:0, idx:0}'
+  calc: '{cov:100, appr:6, auto:4, desc:4, desire:4, effort:2, idx:0}'
+  guarda: '{cov:100, appr:4, auto:5, desc:4, desire:5, effort:3, idx:0}'
+  quantos: '{cov:100, appr:5, auto:5, desc:5, desire:4, effort:3, idx:0}'
+  impar: '{cov:100, appr:6, auto:5, desc:5, desire:5, effort:2, idx:0}'
+  round: '{cov:100, appr:4, auto:4, desc:4, desire:5, effort:4, idx:0}'
+  mumia: '{cov:100, appr:6, auto:5, desc:5, desire:4, effort:1, idx:0}'
+  meio: '{cov:100, appr:5, auto:5, desc:4, desire:5, effort:2, idx:0}'
+  jokenpo: '{cov:100, appr:5, auto:5, desc:4, desire:4, effort:3, idx:0}'
+  final: '{cov:100, appr:5, auto:5, desc:4, desire:3, effort:2, idx:0}'
+  semana: '{cov:100, appr:6, auto:5, desc:5, desire:4, effort:2, idx:0}'
+  varetas: '{cov:100, appr:5, auto:5, desc:2, desire:4, effort:2, idx:0}'
+  bhaskara: '{cov:100, appr:5, auto:5, desc:4, desire:4, effort:3, idx:0}'
+  cortada: '{cov:27, appr:0, auto:0, desc:0, desire:0, effort:0, idx:0}'
+  monica: '{cov:100, appr:5, auto:5, desc:4, desire:4, effort:2, idx:0}'
+  salario: '{cov:100, appr:6, auto:5, desc:4, desire:3, effort:1, idx:0}'
+  loop_i: '{cov:100, appr:6, auto:4, desc:4, desire:5, effort:2, idx:0}'
+  loop_ii: '{cov:100, appr:5, auto:4, desc:4, desire:3, effort:3, idx:0}'
+  pares: '{cov:14, appr:0, auto:0, desc:0, desire:0, effort:0, idx:0}'
+  concentra: '{cov:100, appr:3, auto:3, desc:4, desire:4, effort:4, idx:0}'
+flags:
+  minimum: 0
+  percent: 0
+  admin: 0
+  skills: 0
+  graph: 0
+  devel: 0
+new_items: []
+lang: go
+index: vet_i

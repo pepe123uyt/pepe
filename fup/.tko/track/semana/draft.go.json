@@ -1,0 +1,12 @@
+{
+    "patches": [
+        {
+            "label": "2025-04-29_02-32-51",
+            "content": "@@ -87,16 +87,54 @@\n orario)%0A\n+    // das 8h %C3%A0s 11h e das 14h %C3%A0s 17h%0A\n     if (\n@@ -316,17 +316,17 @@\n  dia == \n-7\n+6\n  && (hor\n"
+        },
+        {
+            "label": "2025-04-29_02-33-41",
+            "content": "package main\nimport \"fmt\"\nfunc main() {\n    var dia, horario int\n    fmt.Scan(&dia, &horario)\n    if (dia == 2 || dia == 3 || dia == 4 || dia == 5 || dia == 6) && ((horario >= 8 && horario <= 11) || (horario >= 14 && horario <= 17)){\n         fmt.Println(\"SIM\")\n    }   else if dia == 7 && (horario >= 8 && horario <= 11){\n        fmt.Println(\"SIM\")\n    }   else {\n        fmt.Println(\"NAO\")\n    }\n       \n}   \n"
+        }
+    ]
+}

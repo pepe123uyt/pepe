@@ -1,0 +1,12 @@
+{
+    "patches": [
+        {
+            "label": "2025-04-27_05-11-17",
+            "content": "@@ -37,205 +37,6 @@\n ) %7B%0A\n-%09var p, d1, d2 int%0A%09fmt.Scan(&p, &d1, &d2)%0A%0A%09soma := d1 + d2%0A%0A%09if p == 0 && soma %25 2 == 0 %7B%0A%09%09fmt.Println(%220%22)%0A%09%7D else if p == 1 && soma %25 2 != 0 %7B%0A%09%09fmt.Println(%220%22)%0A%09%7D%09else %7B%0A%09%09fmt.Println(%221%22)%0A%09%7D%0A\n %7D%0A\n"
+        },
+        {
+            "label": "2025-04-27_05-24-06",
+            "content": "package main\nimport \"fmt\"\nfunc main() {\n\tvar p, d1, d2 int\n\tfmt.Scan(&p, &d1, &d2)\n\n\tsoma := d1 + d2\n\n\tif p == 0 && soma % 2 == 0 {\n\t\tfmt.Println(\"0\")\n\t} else if p == 1 && soma % 2 != 0 {\n\t\tfmt.Println(\"0\")\n\t}\telse {\n\t\tfmt.Println(\"1\")\n\t}\n}\n"
+        }
+    ]
+}

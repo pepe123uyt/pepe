@@ -1,0 +1,16 @@
+{
+    "patches": [
+        {
+            "label": "2025-04-23_18-34-03",
+            "content": "@@ -33,17 +33,16 @@\n ain() %7B%0A\n-%0A\n     var \n@@ -108,17 +108,31 @@\n an(&\n-ope)%0A    \n+'+', &'-', &'*', &'/')%0A\n %0A   \n@@ -275,16 +275,39 @@\n se '/':%0A\n+        if y %3E 0 %7B%0A    \n         \n@@ -320,22 +320,32 @@\n intf(x / y)%0A\n+        %7D%0A\n     %7D%0A%0A%0A%7D%0A\n"
+        },
+        {
+            "label": "2025-04-23_18-58-47",
+            "content": "@@ -23,297 +23,8 @@\n mt%22%0A\n-func soma( x, y int)int %7B%0A    resultado := x + y%0A    return resultado%0A%7D%0Afunc sub(x, y int)int %7B%0A    resultado := x - y%0A    return resultado%0A%7D%0Afunc multi(x, y int)int %7B%0A    resultado := x * y%0A    return resultado%0A%7D%0Afunc divi(x, y int)int %7B%0A    resultado := x / y%0A    return resultado%0A    %7D%0A\n func\n@@ -83,21 +83,16 @@\n  var ope\n-rador\n  string%0A\n@@ -112,15 +112,14 @@\n &ope\n-rador)%0A\n+)%0A    \n %0A   \n@@ -130,17 +130,8 @@\n tch \n-operador \n %7B%0A  \n@@ -141,11 +141,11 @@\n ase \n-%22+%22\n+'+'\n :%0A  \n@@ -165,32 +165,14 @@\n ntf(\n-%22%25d%5Cn%22, soma(x, y))%0A    \n+x + y)\n %0A   \n@@ -181,11 +181,11 @@\n ase \n-%22-%22\n+'-'\n :%0A  \n@@ -205,31 +205,14 @@\n ntf(\n-%22%25d%5Cn%22, sub(x,\n+x -\n  y)\n-)\n-%0A    \n %0A   \n@@ -221,11 +221,11 @@\n ase \n-%22*%22\n+'*'\n :%0A  \n@@ -245,33 +245,14 @@\n ntf(\n-%22%25d%5Cn%22, multi(x, y))%0A    \n+x * y)\n %0A   \n@@ -261,11 +261,11 @@\n ase \n-%22/%22\n+'/'\n :%0A  \n@@ -285,47 +285,22 @@\n ntf(\n-%22%25d%5Cn%22, divi(x, y))%0A    %0A    %0A%0A\n+x / y)\n %0A    %7D%0A%0A\n  %0A%7D%0A\n@@ -295,12 +295,11 @@\n %0A    %7D%0A%0A\n- \n %0A%7D%0A\n"
+        },
+        {
+            "label": "2025-04-23_19-27-36",
+            "content": "package main\nimport \"fmt\"\nfunc soma( x, y int)int {\n    resultado := x + y\n    return resultado\n}\nfunc sub(x, y int)int {\n    resultado := x - y\n    return resultado\n}\nfunc multi(x, y int)int {\n    resultado := x * y\n    return resultado\n}\nfunc divi(x, y int)int {\n    resultado := x / y\n    return resultado\n    }\nfunc main() {\n\n    var x, y int\n    fmt.Scan(&x, &y)\n    var operador string\n    fmt.Scan(&operador)\n\n    switch operador {\n    case \"+\":\n        fmt.Printf(\"%d\\n\", soma(x, y))\n    \n    case \"-\":\n        fmt.Printf(\"%d\\n\", sub(x, y))\n    \n    case \"*\":\n        fmt.Printf(\"%d\\n\", multi(x, y))\n    \n    case \"/\":\n        fmt.Printf(\"%d\\n\", divi(x, y))\n    \n    \n\n\n    }\n\n \n}\n"
+        }
+    ]
+}

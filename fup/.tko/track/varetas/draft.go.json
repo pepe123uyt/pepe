@@ -1,0 +1,56 @@
+{
+    "patches": [
+        {
+            "label": "2025-04-29_02-39-19",
+            "content": "@@ -168,17 +168,17 @@\n    if a \n-%3C\n+!\n = b + c \n@@ -223,17 +223,17 @@\n se if b \n-%3C\n+!\n = a + c \n@@ -282,9 +282,9 @@\n f c \n-%3C\n+!\n = a \n"
+        },
+        {
+            "label": "2025-04-29_02-40-29",
+            "content": "@@ -169,16 +169,17 @@\n   if a %3C\n+=\n  b + c %7B\n@@ -175,24 +175,24 @@\n  %3C= b + c %7B%0A\n-\n         fmt.\n@@ -224,16 +224,17 @@\n e if b %3C\n+=\n  a + c %7B\n@@ -254,32 +254,32 @@\n Println(%22True%22)%0A\n-\n     %7D else if c \n@@ -279,16 +279,17 @@\n e if c %3C\n+=\n  a + b %7B\n"
+        },
+        {
+            "label": "2025-04-29_02-40-51",
+            "content": "@@ -168,18 +168,17 @@\n    if a \n-==\n+%3C\n  b + c %7B\n@@ -191,36 +191,35 @@\n    fmt.Println(%22\n-Fals\n+Tru\n e%22)%0A    %7D else i\n@@ -222,18 +222,17 @@\n se if b \n-==\n+%3C\n  a + c %7B\n@@ -245,36 +245,35 @@\n    fmt.Println(%22\n-Fals\n+Tru\n e%22)%0A    %7D else i\n@@ -280,10 +280,9 @@\n f c \n-==\n+%3C\n  a +\n@@ -311,12 +311,11 @@\n ln(%22\n-Fals\n+Tru\n e%22)%0A\n@@ -340,31 +340,32 @@\n    fmt.Println(%22\n-Tru\n+Fals\n e%22)%0A    %7D%0A%7D%0A\n"
+        },
+        {
+            "label": "2025-04-29_02-42-22",
+            "content": "@@ -172,17 +172,17 @@\n f a \n-%3E\n+=\n = b + c \n %7C%7C b\n@@ -181,22 +181,64 @@\n + c \n-%7C%7C b %3E\n+%7B%0A        fmt.Println(%22False%22)%0A    %7D else if b =\n = a + c \n %7C%7C c\n@@ -237,21 +237,63 @@\n + c \n-%7C%7C c %3E= b + a\n+%7B%0A        fmt.Println(%22False%22)%0A    %7D else if c == a + b\n  %7B%0A \n@@ -333,24 +333,16 @@\n  else %7B%0A\n-        \n         \n@@ -358,20 +358,19 @@\n ln(%22\n-Fals\n+Tru\n e%22)%0A\n-%0A\n     %7D%0A\n-\n %7D\n+%0A\n"
+        },
+        {
+            "label": "2025-04-29_02-44-39",
+            "content": "@@ -177,18 +177,18 @@\n = b + c \n-&&\n+%7C%7C\n  b %3E= a \n@@ -195,10 +195,10 @@\n + c \n-&&\n+%7C%7C\n  c %3E\n@@ -249,16 +249,25 @@\n  else %7B%0A\n+         \n        f\n"
+        },
+        {
+            "label": "2025-04-29_02-45-14",
+            "content": "@@ -173,34 +173,37 @@\n  a %3E\n+=\n  b + c \n-%7C%7C\n+&&\n  b %3E\n+=\n  a + c \n-%7C%7C\n+&&\n  c %3E\n+=\n  b +\n@@ -249,17 +249,16 @@\n  else %7B%0A\n- \n        f\n"
+        },
+        {
+            "label": "2025-04-29_02-46-18",
+            "content": "@@ -271,11 +271,12 @@\n ln(%22\n-Tru\n+Fals\n e%22)%0A\n"
+        },
+        {
+            "label": "2025-04-29_02-48-35",
+            "content": "@@ -176,18 +176,18 @@\n %3E b + c \n-&&\n+%7C%7C\n  b %3E a +\n@@ -193,10 +193,10 @@\n + c \n-&&\n+%7C%7C\n  c %3E\n"
+        },
+        {
+            "label": "2025-04-29_02-49-08",
+            "content": "@@ -78,20 +78,96 @@\n &b, &c)%0A\n-    \n+// %C3%A9 necess%C3%A1rio que nenhumadas varetas seja maior %0A// que a soma das outras duas\n %0A    if \n@@ -176,18 +176,18 @@\n %3E b + c \n-%7C%7C\n+&&\n  b %3E a +\n@@ -193,10 +193,10 @@\n + c \n-%7C%7C\n+&&\n  c %3E\n"
+        },
+        {
+            "label": "2025-04-29_02-49-30",
+            "content": "@@ -82,16 +82,20 @@\n &c)%0A\n+    \n %0A    if \n  b +\n@@ -94,45 +94,44 @@\n  if \n+a %3E\n  b + c \n-%3E a %7C%7C\n+%7C%7C b %3E\n  a + c \n-%3E b %7C%7C\n+%7C%7C c %3E\n  b + a \n-%3E c \n %7B%0A  \n"
+        },
+        {
+            "label": "2025-04-29_02-50-44",
+            "content": "@@ -93,17 +93,17 @@\n   b + c \n-%3C\n+%3E\n  a %7C%7C a \n@@ -106,17 +106,17 @@\n %7C a + c \n-%3C\n+%3E\n  b %7C%7C b \n@@ -123,9 +123,9 @@\n + a \n-%3C\n+%3E\n  c %7B\n@@ -150,11 +150,12 @@\n ln(%22\n-Tru\n+Fals\n e%22)%0A\n@@ -184,28 +184,27 @@\n mt.Println(%22\n-Fals\n+Tru\n e%22)%0A%0A    %7D%0A%7D\n"
+        },
+        {
+            "label": "2025-04-29_02-51-26",
+            "content": "@@ -82,20 +82,16 @@\n &c)%0A\n-    \n %0A    if \n a %3E=\n@@ -90,47 +90,45 @@\n  if \n-a %3E=\n  b + c \n-%7C%7C b %3E= a + c %7C%7C c %3E=\n+%3C a %7C%7C a + c %3C b %7C%7C\n  b + a \n+%3C c \n %7B%0A  \n@@ -150,12 +150,11 @@\n ln(%22\n-Fals\n+Tru\n e%22)%0A\n@@ -183,27 +183,28 @@\n mt.Println(%22\n-Tru\n+Fals\n e%22)%0A%0A    %7D%0A%7D\n"
+        },
+        {
+            "label": "2025-04-29_02-51-59",
+            "content": "package main\nimport \"fmt\"\nfunc main() {\n    var a, b, c int\n    fmt.Scan(&a, &b, &c)\n    \n    if a >= b + c || b >= a + c || c >= b + a {\n        fmt.Println(\"False\")\n    } else {\n        fmt.Println(\"True\")\n\n    }\n}"
+        }
+    ]
+}

@@ -1,0 +1,116 @@
+{
+    "patches": [
+        {
+            "label": "2025-04-24_21-06-54",
+            "content": "@@ -36,16 +36,17 @@\n () %7B%0A   \n+ \n var wifi\n@@ -69,307 +69,8 @@\n ool%0A\n-   %0A    if !wifi %7B%0A        fmt.Printf(%22you must connect to wifi%5Cn%22)%0A    %7D   else if !login %7B%0A        fmt.Printf(%22you need to login first%5Cn%22)%0A    %7D   else if !admin %7B%0A        fmt.Printf(%22you must to login as admin%5Cn%22)%0A      %7D       else %7B%0A        fmt.Printf(%22done%5Cn%22)%0A            %0A      %7D%0A%0A    %0A%0A%0A%0A%0A%0A\n %0A   \n"
+        },
+        {
+            "label": "2025-04-25_03-00-31",
+            "content": "@@ -79,15 +79,16 @@\n  if \n+!\n wifi %7B%0A\n-\n     \n@@ -148,16 +148,17 @@\n else if \n+!\n login %7B%0A\n@@ -201,24 +201,24 @@\n n first%5Cn%22)%0A\n-\n     %7D   else\n@@ -221,16 +221,17 @@\n else if \n+!\n admin %7B%0A\n"
+        },
+        {
+            "label": "2025-04-25_03-01-10",
+            "content": "@@ -40,126 +40,35 @@\n %0A   \n+var\n  wifi\n- := 1%0A    login := 1%0A    admin := 0%0A%0A    iswifi := wifi == 1%0A    islogin := login == 1%0A    isadmin := admin == 1%0A\n+, login, admin bool\n %0A   \n@@ -75,19 +75,16 @@\n %0A    if \n-!is\n wifi %7B%0A \n@@ -147,19 +147,16 @@\n else if \n-!is\n login %7B%0A\n@@ -223,11 +223,8 @@\n  if \n-!is\n admi\n"
+        },
+        {
+            "label": "2025-04-25_03-02-36",
+            "content": "@@ -75,17 +75,17 @@\n dmin := \n-1\n+0\n %0A%0A    is\n"
+        },
+        {
+            "label": "2025-04-25_03-02-58",
+            "content": "@@ -96,25 +96,25 @@\n  := wifi == \n-0\n+1\n %0A    islogin\n@@ -126,17 +126,17 @@\n ogin == \n-0\n+1\n %0A    isa\n@@ -156,9 +156,9 @@\n  == \n-0\n+1\n %0A%0A  \n"
+        },
+        {
+            "label": "2025-04-25_03-05-20",
+            "content": "@@ -189,26 +189,25 @@\n    fmt.Print\n-ln\n+f\n (%22you must c\n@@ -220,16 +220,18 @@\n  to wifi\n+%5Cn\n %22)%0A    %7D\n@@ -269,18 +269,17 @@\n mt.Print\n-ln\n+f\n (%22you ne\n@@ -295,16 +295,18 @@\n in first\n+%5Cn\n %22)%0A    %7D\n@@ -348,12 +348,10 @@\n rint\n-ln( \n+f(\n %22you\n@@ -356,16 +356,19 @@\n ou must \n+to \n login as\n@@ -373,16 +373,18 @@\n as admin\n+%5Cn\n %22)%0A     \n@@ -420,16 +420,17 @@\n rint\n-ln\n+f\n (%22done\n+%5Cn\n %22)%0A \n"
+        },
+        {
+            "label": "2025-04-25_03-07-20",
+            "content": "@@ -40,35 +40,125 @@\n %0A   \n-var\n  wifi\n-, login, admin bool\n+ := 1%0A    login := 1%0A    admin := 1%0A%0A    iswifi := wifi == 0%0A    islogin := login == 0%0A    isadmin := admin == 0\n %0A%0A  \n@@ -167,16 +167,18 @@\n     if !\n+is\n wifi %7B%0A \n@@ -241,16 +241,18 @@\n lse if !\n+is\n login %7B%0A\n@@ -315,16 +315,18 @@\n lse if !\n+is\n admin %7B%0A\n"
+        },
+        {
+            "label": "2025-04-25_03-08-21",
+            "content": "@@ -48,37 +48,310 @@\n wifi\n- bool%0A%0A   %0A   fmt.Print(wifi)\n+, login, admin bool%0A%0A   %0A    if !wifi %7B%0A        fmt.Println(%22you must connect to wifi%22)%0A    %7D   else if !login %7B%0A        fmt.Println(%22you need to login first%22)%0A    %7D   else if !admin %7B%0A        fmt.Println( %22you must login as admin%22)%0A      %7D       else %7B%0A        fmt.Println(%22done%22)%0A            %0A      %7D\n %0A%0A  \n"
+        },
+        {
+            "label": "2025-04-25_03-10-17",
+            "content": "@@ -48,266 +48,37 @@\n wifi\n-, login, admin bool%0A%0A   if wifi %7B%0A    fmt.Println(%22you must connect to wifi%22)%0A%7D   else if login %7B%0A    fmt.Println(%22you need to login first%22)%0A%7D   else if admin %7B%0A    fmt.Println( %22you must login as admin%22)%0A  %7D       else %7B%0A    fmt.Println(%22done%22)%0A        %0A  %7D\n+ bool%0A%0A   %0A   fmt.Print(wifi)\n %0A%0A  \n"
+        },
+        {
+            "label": "2025-04-25_03-13-49",
+            "content": "@@ -257,38 +257,18 @@\n   %7D \n-else if wifi && login && admin\n+      else\n  %7B%0A \n"
+        },
+        {
+            "label": "2025-04-25_03-16-55",
+            "content": "@@ -1,347 +1,52 @@\n-package main%0Aimport %22fmt%22%0Afunc main() %7B%0A   var wifi, login, admin bool%0A%0A   if wifi %7B%0A    fmt.Println(%22you must connect to wifi%22)%0A%7D   else if login %7B%0A    fmt.Println(%22you need to login first%22)%0A%7D   else if admin %7B%0A    fmt.Println( %22you must login as admin%22)%0A%7D else if wifi && login && admin %7B%0A    fmt.Println(%22done%22)%0A        %0A  %7D%0A%0A    %0A%0A%0A%0A%0A%0A%0A    %0A%7D\n+@@ -249,16 +249,18 @@%0A admin%2522)%250A%0A+  %0A %257D else i\n %0A\n"
+        },
+        {
+            "label": "2025-04-25_03-17-15",
+            "content": "@@ -246,26 +246,24 @@\n as admin%22)%0A%7D\n-  \n  else if wif\n"
+        },
+        {
+            "label": "2025-04-25_03-17-27",
+            "content": "@@ -36,17 +36,16 @@\n () %7B%0A   \n- \n var wifi\n@@ -63,21 +63,16 @@\n min bool\n-%0A    \n %0A%0A   if \n@@ -258,16 +258,42 @@\n    else \n+if wifi && login && admin \n %7B%0A    fm\n"
+        },
+        {
+            "label": "2025-04-27_04-20-29",
+            "content": "@@ -81,9 +81,8 @@\n  if \n-!\n wifi\n"
+        },
+        {
+            "label": "2025-04-27_04-22-16",
+            "content": "@@ -204,17 +204,16 @@\n else if \n-!\n admin %7B%0A\n"
+        },
+        {
+            "label": "2025-04-27_04-22-29",
+            "content": "@@ -81,15 +81,16 @@\n  if \n+!\n wifi %7B%0A\n-\n     \n@@ -141,17 +141,16 @@\n else if \n-!\n login %7B%0A\n@@ -192,16 +192,16 @@\n first%22)%0A\n-\n %7D   else\n@@ -204,16 +204,17 @@\n else if \n+!\n admin %7B%0A\n"
+        },
+        {
+            "label": "2025-04-27_04-22-44",
+            "content": "@@ -41,52 +41,42 @@\n     \n-wifi := 1%0A    login := 1%0A   \n+var wifi, login,\n  admin\n-:= 1\n+ bool\n %0A    %0A\n+%0A\n    i\n@@ -82,21 +82,16 @@\n if wifi \n-== 0 \n %7B%0A    fm\n@@ -144,19 +144,15 @@\n  if \n+!\n login \n-== 0 \n %7B%0A  \n@@ -214,13 +214,8 @@\n min \n-== 0 \n %7B%0A  \n"
+        },
+        {
+            "label": "2025-04-27_04-26-00",
+            "content": "@@ -33,21 +33,16 @@\n ain() %7B%0A\n-    %0A\n     wifi\n"
+        },
+        {
+            "label": "2025-04-27_04-27-03",
+            "content": "@@ -10,28 +10,21 @@\n ain%0A\n-%0A\n import \n-(%0A%09\n %22fmt%22%0A\n-)%0A%0A\n func\n@@ -33,17 +33,25 @@\n ain() %7B%0A\n-%09\n+    %0A    \n wifi := \n@@ -52,17 +52,20 @@\n fi := 1%0A\n-%09\n+    \n login :=\n@@ -71,22 +71,30 @@\n = 1%0A\n-%09\n+    \n admin\n- \n := 1%0A\n-%0A%09\n+    %0A   \n if w\n@@ -96,34 +96,36 @@\n  if wifi == 0 %7B%0A\n-%09%09\n+    \n fmt.Println(%22you\n@@ -148,18 +148,19 @@\n  wifi%22)%0A\n-%09\n %7D\n+  \n  else if\n@@ -165,34 +165,36 @@\n if login == 0 %7B%0A\n-%09%09\n+    \n fmt.Println(%22you\n@@ -216,18 +216,19 @@\n first%22)%0A\n-%09\n %7D\n+  \n  else if\n@@ -241,18 +241,20 @@\n  == 0 %7B%0A\n-%09%09\n+    \n fmt.Prin\n@@ -249,32 +249,33 @@\n     fmt.Println(\n+ \n %22you must login \n@@ -289,18 +289,19 @@\n n%22)%0A\n-%09\n %7D\n+  \n  else %7B%0A\n %09%09fm\n@@ -300,10 +300,12 @@\n e %7B%0A\n-%09%09\n+    \n fmt.\n@@ -324,9 +324,36 @@\n e%22)%0A\n-%09%7D\n+        %0A  %7D%0A%0A    %0A%0A%0A%0A%0A%0A%0A    \n %0A%7D%0A\n"
+        },
+        {
+            "label": "2025-04-27_04-27-52",
+            "content": "@@ -95,32 +95,34 @@\n  0 %7B%0A%09%09fmt.Print\n+ln\n (%22you must conne\n@@ -165,24 +165,26 @@\n %0A%09%09fmt.Print\n+ln\n (%22you need t\n@@ -234,16 +234,18 @@\n mt.Print\n+ln\n (%22you mu\n@@ -285,16 +285,18 @@\n mt.Print\n+ln\n (%22done%22)\n"
+        },
+        {
+            "label": "2025-04-27_04-28-09",
+            "content": "@@ -95,33 +95,32 @@\n  0 %7B%0A%09%09fmt.Print\n-f\n (%22you must conne\n@@ -163,25 +163,24 @@\n %0A%09%09fmt.Print\n-f\n (%22you need t\n@@ -230,17 +230,16 @@\n mt.Print\n-f\n (%22you mu\n@@ -279,17 +279,16 @@\n mt.Print\n-f\n (%22done%22)\n"
+        },
+        {
+            "label": "2025-04-27_04-28-21",
+            "content": "@@ -95,34 +95,33 @@\n  0 %7B%0A%09%09fmt.Print\n-ln\n+f\n (%22you must conne\n@@ -164,26 +164,25 @@\n %0A%09%09fmt.Print\n-ln\n+f\n (%22you need t\n@@ -236,10 +236,9 @@\n rint\n-ln\n+f\n (%22yo\n@@ -282,16 +282,17 @@\n mt.Print\n+f\n (%22done%22)\n"
+        },
+        {
+            "label": "2025-04-27_04-28-44",
+            "content": "@@ -45,35 +45,41 @@\n  %7B%0A%09\n-var wifi, login, \n+wifi := 1%0A%09login := 1%0A%09\n admin \n-bool\n+:= 1\n %0A%0A%09i\n@@ -84,16 +84,22 @@\n %09if wifi\n+ == 0 \n %7B%0A%09%09fmt.\n@@ -151,16 +151,21 @@\n f login \n+== 0 \n %7B%0A%09%09fmt.\n@@ -212,24 +212,29 @@\n se if admin \n+== 0 \n %7B%0A%09%09fmt.Prin\n@@ -276,37 +276,8 @@\n lse \n-if !wifi && !login && !admin \n %7B%0A%09%09\n"
+        },
+        {
+            "label": "2025-04-27_04-30-36",
+            "content": "@@ -72,65 +72,14 @@\n bool\n-%0A    wifi = true%0A    login = true%0A    admin = true\n %0A%0A%09if \n-!\n wifi\n@@ -133,17 +133,16 @@\n else if \n-!\n login %7B%0A\n@@ -197,9 +197,8 @@\n  if \n-!\n admi\n@@ -250,16 +250,45 @@\n %09%7D else \n+if !wifi && !login && !admin \n %7B%0A%09%09fmt.\n"
+        },
+        {
+            "label": "2025-04-27_04-33-20",
+            "content": "@@ -316,18 +316,16 @@\n mt.Print\n-ln\n (%22done%22)\n"
+        },
+        {
+            "label": "2025-04-27_04-34-25",
+            "content": "@@ -73,61 +73,57 @@\n ool%0A\n-%0A%09fmt.Scan(&wifi)%0A%09fmt.Scan(&login)%0A%09fmt.Scan(&admin)\n+    wifi = true%0A    login = true%0A    admin = true\n %0A%0A%09i\n"
+        },
+        {
+            "label": "2025-04-27_04-39-41",
+            "content": "@@ -282,19 +282,16 @@\n ou must \n-to \n login as\n"
+        },
+        {
+            "label": "2025-04-27_04-40-06",
+            "content": "package main\n\nimport (\n\t\"fmt\"\n)\n\nfunc main() {\n\tvar wifi, login, admin bool\n\n\tfmt.Scan(&wifi)\n\tfmt.Scan(&login)\n\tfmt.Scan(&admin)\n\n\tif !wifi{\n\t\tfmt.Println(\"you must connect to wifi\")\n\t} else if !login {\n\t\tfmt.Println(\"you need to login first\")\n\t} else if !admin {\n\t\tfmt.Println(\"you must to login as admin\")\n\t} else {\n\t\tfmt.Println(\"done\")\n\t}\n}\n"
+        }
+    ]
+}

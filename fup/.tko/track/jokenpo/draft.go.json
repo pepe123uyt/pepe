@@ -1,0 +1,100 @@
+{
+    "patches": [
+        {
+            "label": "2025-04-27_23-55-31",
+            "content": "@@ -104,17 +104,17 @@\n es1 == '\n-R\n+r\n ' && es2\n@@ -118,17 +118,17 @@\n es2 == '\n-S\n+s\n ' %7B%0A    \n@@ -173,17 +173,17 @@\n es1 == '\n-S\n+s\n ' && es2\n@@ -187,17 +187,17 @@\n es2 == '\n-P\n+p\n '%7B%0A     \n@@ -241,17 +241,17 @@\n es1 == '\n-P\n+p\n ' && es2\n@@ -259,9 +259,9 @@\n == '\n-R\n+r\n ' %7B%0A\n"
+        },
+        {
+            "label": "2025-04-27_23-56-30",
+            "content": "@@ -103,19 +103,33 @@\n  es1 == \n-es2\n+'R' && es2 == 'S'\n  %7B%0A     \n@@ -148,14 +148,12 @@\n ln(%22\n-empate\n+jog1\n %22)%0A \n@@ -309,33 +309,19 @@\n  es1 == \n-'R' && es2 == 'S'\n+es2\n  %7B%0A     \n@@ -328,36 +328,38 @@\n    fmt.Println(%22\n-jog1\n+empate\n %22)%0A    %7D else %7B%0A\n"
+        },
+        {
+            "label": "2025-04-27_23-57-44",
+            "content": "@@ -82,15 +82,13 @@\n c%22, \n-&\n es1, \n-&\n es2)\n"
+        },
+        {
+            "label": "2025-04-27_23-58-08",
+            "content": "@@ -1,403 +1,49 @@\n-package main%0Aimport %22fmt%22%0Afunc main() %7B%0A    var es1, es2 rune%0A    fmt.Scan(%22%25c, %25c%22, &es1, &es2)%0A%0A    if es1 == es2 %7B%0A        fmt.Println(%22empate%22)%0A    %7D else if es1 == 'S' && es2 == 'P'%7B%0A        fmt.Println(%22jog1%22)%0A    %7D else if es1 == 'P' && es2 == 'R' %7B%0A        fmt.Println(%22jog1%22)%0A    %7D else if es1 == 'R' && es2 == 'S' %7B%0A        fmt.Println(%22jog1%22)%0A    %7D else %7B%0A        fmt.Println(%22jog2%22)%0A    %7D%0A%7D\n+@@ -103,16 +103,17 @@%0A if es1 =%0A+=%0A  es2 %257B%250A \n %0A\n"
+        },
+        {
+            "label": "2025-04-27_23-58-57",
+            "content": "@@ -71,10 +71,8 @@\n Scan\n-ln\n (%22%25c\n@@ -128,16 +128,18 @@\n mt.Print\n+ln\n (%22empate\n@@ -190,32 +190,34 @@\n        fmt.Print\n+ln\n (%22jog1%22)%0A    %7D e\n@@ -259,32 +259,34 @@\n        fmt.Print\n+ln\n (%22jog1%22)%0A    %7D e\n@@ -332,24 +332,26 @@\n    fmt.Print\n+ln\n (%22jog1%22)%0A   \n@@ -377,16 +377,18 @@\n mt.Print\n+ln\n (%22jog2%22)\n"
+        },
+        {
+            "label": "2025-04-28_00-03-22",
+            "content": "@@ -45,13 +45,15 @@\n var \n-c1, c\n+es1, es\n 2 ru\n@@ -85,14 +85,16 @@\n %22, &\n-c\n+es\n 1, &\n-c\n+es\n 2)%0A%0A\n@@ -104,15 +104,17 @@\n  if \n-c\n+es\n 1 == \n-c\n+es\n 2 %7B%0A\n@@ -159,29 +159,31 @@\n  if \n-c\n+es\n 1 == '\n-s\n+S\n ' && \n-c\n+es\n 2 == '\n-p\n+P\n '%7B%0A \n@@ -225,29 +225,31 @@\n  if \n-c\n+es\n 1 == '\n-p\n+P\n ' && \n-c\n+es\n 2 == '\n-r\n+R\n ' %7B%0A\n@@ -292,29 +292,31 @@\n  if \n-c\n+es\n 1 == '\n-r\n+R\n ' && \n-c\n+es\n 2 == '\n-s\n+S\n ' %7B%0A\n"
+        },
+        {
+            "label": "2025-04-28_00-06-14",
+            "content": "@@ -65,16 +65,18 @@\n fmt.Scan\n+ln\n (%22%25c, %25c\n@@ -106,24 +106,10 @@\n  == \n-'r' && c2 == 's'\n+c2\n  %7B%0A \n@@ -276,34 +276,48 @@\n %7D else if c1 == \n-c2\n+'r' && c2 == 's'\n  %7B%0A        fmt.P\n"
+        },
+        {
+            "label": "2025-04-28_00-07-54",
+            "content": "@@ -130,36 +130,38 @@\n      fmt.Print(%22\n-jog1\n+empate\n %22)%0A    %7D else if\n@@ -312,38 +312,36 @@\n      fmt.Print(%22\n-empate\n+jog1\n %22)%0A    %7D else %7B%0A\n"
+        },
+        {
+            "label": "2025-04-28_00-08-17",
+            "content": "@@ -65,17 +65,16 @@\n fmt.Scan\n-f\n (%22%25c, %25c\n"
+        },
+        {
+            "label": "2025-04-28_00-09-06",
+            "content": "@@ -70,16 +70,17 @@\n canf(%22%25c\n+,\n  %25c%22, &c\n"
+        },
+        {
+            "label": "2025-04-28_00-11-01",
+            "content": "@@ -74,34 +74,17 @@\n (%22%25c\n+ %25c\n %22, &c1\n-)%0A    fmt.Scanf(%22%25c%22\n , &c\n"
+        },
+        {
+            "label": "2025-04-28_00-11-37",
+            "content": "@@ -118,17 +118,17 @@\n  c1 == '\n-R\n+r\n ' && c2 \n@@ -131,17 +131,17 @@\n  c2 == '\n-S\n+s\n ' %7B%0A    \n@@ -183,17 +183,17 @@\n  c1 == '\n-S\n+s\n ' && c2 \n@@ -196,17 +196,17 @@\n  c2 == '\n-P\n+p\n '%7B%0A     \n@@ -247,17 +247,17 @@\n  c1 == '\n-P\n+p\n ' && c2 \n@@ -264,9 +264,9 @@\n == '\n-R\n+r\n ' %7B%0A\n"
+        },
+        {
+            "label": "2025-04-28_00-12-09",
+            "content": "@@ -145,34 +145,32 @@\n        fmt.Print\n-ln\n (%22jog1%22)%0A    %7D e\n@@ -209,34 +209,32 @@\n        fmt.Print\n-ln\n (%22jog1%22)%0A    %7D e\n@@ -278,26 +278,24 @@\n    fmt.Print\n-ln\n (%22jog1%22)%0A   \n@@ -333,18 +333,16 @@\n mt.Print\n-ln\n (%22empate\n@@ -378,10 +378,8 @@\n rint\n-ln\n (%22jo\n"
+        },
+        {
+            "label": "2025-04-28_00-12-43",
+            "content": "@@ -339,16 +339,18 @@\n mt.Print\n+ln\n (%22empate\n"
+        },
+        {
+            "label": "2025-04-28_00-12-51",
+            "content": "@@ -380,16 +380,18 @@\n mt.Print\n+ln\n (%22jog2%22)\n"
+        },
+        {
+            "label": "2025-04-28_00-13-04",
+            "content": "@@ -19,17 +19,16 @@\n t %22fmt%22%0A\n-%0A\n func mai\n@@ -33,17 +33,20 @@\n ain() %7B%0A\n-%09\n+    \n var c1, \n@@ -57,17 +57,20 @@\n une%0A\n-%09\n+    \n fmt.Scan\n ln(&\n@@ -69,22 +69,47 @@\n Scan\n-ln(&c1\n+f(%22%25c%22, &c1)%0A    fmt.Scanf(%22%25c%22\n , &c2)%0A%0A\n %09if \n@@ -104,17 +104,20 @@\n , &c2)%0A%0A\n-%09\n+    \n if c1 ==\n@@ -132,26 +132,32 @@\n c2 == 'S' %7B%0A\n-%09%09\n+        \n fmt.Println(\n@@ -156,33 +156,36 @@\n Println(%22jog1%22)%0A\n-%09\n+    \n %7D else if c1 == \n@@ -200,21 +200,26 @@\n 2 == 'P'\n- \n %7B%0A\n-%09%09\n+        \n fmt.Prin\n@@ -222,33 +222,36 @@\n Println(%22jog1%22)%0A\n-%09\n+    \n %7D else if c1 == \n@@ -269,18 +269,24 @@\n = 'R' %7B%0A\n-%09%09\n+        \n fmt.Prin\n@@ -297,17 +297,20 @@\n %22jog1%22)%0A\n-%09\n+    \n %7D else i\n@@ -322,18 +322,24 @@\n == c2 %7B%0A\n-%09%09\n+        \n fmt.Prin\n@@ -339,18 +339,16 @@\n mt.Print\n-ln\n (%22empate\n@@ -350,17 +350,20 @@\n mpate%22)%0A\n-%09\n+    \n %7D else %7B\n@@ -367,10 +367,16 @@\n e %7B%0A\n-%09%09\n+        \n fmt.\n@@ -376,26 +376,24 @@\n    fmt.Print\n-ln\n (%22jog2%22)%0A%09%7D%0A\n@@ -393,9 +393,12 @@\n 2%22)%0A\n-%09\n+    \n %7D%0A%7D%0A\n"
+        },
+        {
+            "label": "2025-04-28_00-15-13",
+            "content": "@@ -78,17 +78,16 @@\n 2)%0A%0A%09if \n-(\n c1 == 'R\n@@ -104,42 +104,102 @@\n  'S'\n-) %7C%7C (c1 == 'S' && c2 == 'P') %7C%7C (\n+ %7B%0A%09%09fmt.Println(%22jog1%22)%0A%09%7D else if c1 == 'S' && c2 == 'P' %7B%0A%09%09fmt.Println(%22jog1%22)%0A%09%7D else if \n c1 =\n@@ -216,17 +216,16 @@\n 2 == 'R'\n-)\n  %7B%0A%09%09fmt\n"
+        },
+        {
+            "label": "2025-04-28_00-16-39",
+            "content": "@@ -60,16 +60,18 @@\n fmt.Scan\n+ln\n (&c1, &c\n"
+        },
+        {
+            "label": "2025-04-28_00-16-56",
+            "content": "@@ -64,19 +64,9 @@\n Scan\n-f(%22%25c %25c%22, \n+(\n &c1,\n"
+        },
+        {
+            "label": "2025-04-28_00-17-28",
+            "content": "@@ -90,54 +90,8 @@\n %09if \n-c1 == c2 %7B%0A%09%09fmt.Println(%22empate%22)%0A%09%7D else if \n (c1 \n@@ -166,17 +166,16 @@\n  == 'R')\n- \n  %7B%0A%09%09fmt\n@@ -191,16 +191,62 @@\n %22jog1%22)%0A\n+%09%7D else if c1 == c2 %7B%0A%09%09fmt.Println(%22empate%22)%0A\n %09%7D else \n"
+        },
+        {
+            "label": "2025-04-28_00-19-10",
+            "content": "@@ -64,118 +64,42 @@\n Scan\n-ln(&c1)%0A%09fmt.Scanln(&c2)%0A%0A%09if (c1 == 'R' && c2 == 'S') %7C%7C (c1 == 'S' && c2 == 'P') %7C%7C (c1 == 'P' && c2 == 'R')\n+f(%22%25c %25c%22, &c1, &c2)%0A%0A%09if c1 == c2\n  %7B%0A%09\n@@ -116,12 +116,14 @@\n ln(%22\n-jog1\n+empate\n %22)%0A%09\n@@ -153,17 +153,17 @@\n  c2 == '\n-P\n+S\n ') %7C%7C (c\n@@ -181,17 +181,17 @@\n  c2 == '\n-R\n+P\n ') %7C%7C (c\n@@ -209,19 +209,20 @@\n  c2 == '\n-S\n+R\n ')\n+ \n  %7B%0A%09%09fmt\n@@ -234,17 +234,17 @@\n tln(%22jog\n-2\n+1\n %22)%0A%09%7D el\n@@ -252,10 +252,8 @@\n e %7B%0A\n-%09%0A\n %09%09fm\n@@ -259,26 +259,24 @@\n mt.Println(%22\n-empate\n+jog2\n %22)%0A%09%7D%0A%7D%0A\n"
+        },
+        {
+            "label": "2025-04-28_00-21-03",
+            "content": "@@ -50,14 +50,12 @@\n  c2 \n-string\n+rune\n %0A%09fm\n@@ -64,14 +64,28 @@\n Scan\n+ln\n (&c1\n-, \n+)%0A%09fmt.Scanln(\n &c2)\n@@ -94,16 +94,88 @@\n %09if \n+(\n c1 == \n-c2\n+'R' && c2 == 'S') %7C%7C (c1 == 'S' && c2 == 'P') %7C%7C (c1 == 'P' && c2 == 'R')\n  %7B%0A%09\n@@ -192,14 +192,12 @@\n ln(%22\n-empate\n+jog1\n %22)%0A%09\n@@ -213,19 +213,19 @@\n  (c1 == \n-%22R%22\n+'R'\n  && c2 =\n@@ -230,38 +230,26 @@\n  == \n-%22S%22\n+'P'\n ) %7C%7C \n-%0A%09          \n (c1 == \n-%22S%22\n+'S'\n  && \n@@ -258,38 +258,26 @@\n  == \n-%22P%22\n+'R'\n ) %7C%7C \n-%0A%09          \n (c1 == \n-%22P%22\n+'P'\n  && \n@@ -286,11 +286,11 @@\n  == \n-%22R%22\n+'S'\n ) %7B%0A\n@@ -299,33 +299,33 @@\n fmt.Println(%22jog\n-1\n+2\n %22)%0A%09%7D else %7B%0A%09%09f\n@@ -321,16 +321,18 @@\n  else %7B%0A\n+%09%0A\n %09%09fmt.Pr\n@@ -342,17 +342,18 @@\n ln(%22\n-jog2\n+empate\n %22)%0A\n-%0A\n %09\n+%7D\n %0A%7D%0A\n-%7D\n"
+        },
+        {
+            "label": "2025-04-28_18-37-11",
+            "content": "@@ -50,12 +50,14 @@\n  c2 \n-rune\n+string\n %0A%09fm\n@@ -131,19 +131,19 @@\n  (c1 == \n-'R'\n+%22R%22\n  && c2 =\n@@ -144,19 +144,19 @@\n & c2 == \n-'S'\n+%22S%22\n ) %7C%7C %0A%09 \n@@ -175,11 +175,11 @@\n  == \n-'S'\n+%22S%22\n  && \n@@ -184,19 +184,19 @@\n & c2 == \n-'P'\n+%22P%22\n ) %7C%7C %0A%09 \n@@ -215,11 +215,11 @@\n  == \n-'P'\n+%22P%22\n  && \n@@ -228,11 +228,11 @@\n  == \n-'R'\n+%22R%22\n ) %7B%0A\n"
+        },
+        {
+            "label": "2025-04-28_18-38-47",
+            "content": "package main\nimport \"fmt\"\n\nfunc main() {\n\tvar c1, c2 rune\n\tfmt.Scan(&c1, &c2)\n\n\tif c1 == c2 {\n\t\tfmt.Println(\"empate\")\n\t} else if (c1 == 'R' && c2 == 'S') || \n\t          (c1 == 'S' && c2 == 'P') || \n\t          (c1 == 'P' && c2 == 'R') {\n\t\tfmt.Println(\"jog1\")\n\t} else {\n\t\tfmt.Println(\"jog2\")\n\n\t\n}\n}"
+        }
+    ]
+}

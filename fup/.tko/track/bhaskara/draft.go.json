@@ -1,0 +1,68 @@
+{
+    "patches": [
+        {
+            "label": "2025-04-29_03-09-10",
+            "content": "@@ -332,32 +332,37 @@\n fmt.Printf(%22%25.2f\n+ %25.2f\n %5Cn%22, bhaskplus)%0A\n@@ -363,37 +363,8 @@\n plus\n-)%0A        fmt.Printf(%22%25.2f%5Cn%22\n , bh\n"
+        },
+        {
+            "label": "2025-04-29_03-10-48",
+            "content": "@@ -131,27 +131,24 @@\n * a * c)%0A   \n- //\n  bhaskplus :\n@@ -188,11 +188,8 @@\n %0A   \n- //\n  bha\n@@ -349,102 +349,57 @@\n n%22, \n- (-b + math.Sqrt(delta)) / 2 * a)%0A        fmt.Printf(%22%25.2f%5Cn%22, (-b - math.Sqrt(delta)) / 2 * a\n+bhaskplus)%0A        fmt.Printf(%22%25.2f%5Cn%22, bhaskless\n )%0A  \n@@ -456,40 +456,17 @@\n n%22, \n- (-b + math.Sqrt(delta)) / 2 * a\n+bhaskplus\n )%0A  \n"
+        },
+        {
+            "label": "2025-04-29_03-13-18",
+            "content": "@@ -136,37 +136,125 @@\n  c)%0A\n-%0A\n     \n-if\n+// bhaskplus :=\n  (\n+-\n b \n-* b) - (4 * a * c)\n++ math.Sqrt(delta)) / 2 * a%0A    // bhaskless := (-b - math.Sqrt(delta)) / 2 * a%0A%0A    if delta\n  %3C 0\n@@ -310,37 +310,21 @@\n else if \n-(b * b) - (4 * a * c)\n+delta\n  %3E 0 %7B%0A \n@@ -461,37 +461,21 @@\n else if \n-(b * b) - (4 * a * c)\n+delta\n  == 0 %7B%0A\n"
+        },
+        {
+            "label": "2025-04-29_03-13-53",
+            "content": "@@ -60,28 +60,14 @@\n ar a\n- = 0 , b = 0 , c = 0\n+, b, c\n  flo\n"
+        },
+        {
+            "label": "2025-04-29_03-14-20",
+            "content": "@@ -1,446 +1,365 @@\n-package main%0Aimport %22fmt%22%0Aimport %22math%22%0Afunc main() %7B%0A    var a, b, c float64%0A    fmt.Scan(&a, &b, &c)%0A%0A    delta := b*b - 4*a*c%0A    bhaskarap := -b + math.Sqrt(delta) / 2*a%0A    bhaskaral := -b - math.Sqrt(delta) / 2*a%0A%0A    if delta %3E 0 %7B%0A        fmt.Printf(%22%25.2f%5Cn%22, bhaskarap)%0A        fmt.Printf(%22%25.2f%5Cn%22, bhaskaral)%0A    %7D else if delta %3C 0 %7B%0A        fmt.Printf(%22%25.2f%5Cn%22, bhaskarap)%0A    %7D else %7B%0A        fmt.Println(%22nao ha raiz real%22)%0A    %7D%0A%7D\n+@@ -61,14 +61,27 @@%0A r a %0A-, b, c%0A+= 0 , b = 0 , c = 0%0A  flo%0A@@ -111,16 +111,52 @@%0A b, &c)%250A%250A%0A+    delta := (b * b) - (4 * a * c)%250A%250A%0A     if (%0A@@ -310,37 +310,21 @@%0A th.Sqrt(%0A-(b * b) - (4 * a * c)%0A+delta%0A )) / 2 *%0A@@ -372,37 +372,21 @@%0A th.Sqrt(%0A-(b * b) - (4 * a * c)%0A+delta%0A )) / 2 *%0A@@ -478,37 +478,21 @@%0A th.Sqrt(%0A-(b * b) - (4 * a * c)%0A+delta%0A )) / 2 *\n %0A\n"
+        },
+        {
+            "label": "2025-04-29_03-25-02",
+            "content": "@@ -126,16 +126,102 @@\n a*c%0A    \n+bhaskarap := -b + math.Sqrt(delta) / 2*a%0A    bhaskaral := -b - math.Sqrt(delta) / 2*a%0A\n %0A    if \n@@ -265,35 +265,17 @@\n n%22, \n--b + math.Sqrt(delta) / 2*a\n+bhaskarap\n )%0A  \n@@ -305,35 +305,17 @@\n n%22, \n--b - math.Sqrt(delta) / 2*a\n+bhaskaral\n )%0A  \n@@ -371,16 +371,17 @@\n n%22, \n--b / 2*a\n+bhaskarap\n )%0A  \n"
+        },
+        {
+            "label": "2025-04-29_03-27-03",
+            "content": "@@ -114,24 +114,24 @@\n  := \n-(\n b*b\n-)\n  - \n-(\n 4*a*c\n-)\n %0A\n+    \n %0A   \n"
+        },
+        {
+            "label": "2025-04-29_03-27-36",
+            "content": "@@ -116,24 +116,19 @@\n = (b\n- * \n+*\n b) - (4\n- \n *a\n- * \n+*\n c)%0A%0A\n@@ -196,27 +196,25 @@\n t(delta) / 2\n- * \n+*\n a)%0A        f\n@@ -254,27 +254,25 @@\n t(delta) / 2\n- * \n+*\n a)%0A    %7D els\n@@ -327,11 +327,9 @@\n  / 2\n- * \n+*\n a)%0A \n"
+        },
+        {
+            "label": "2025-04-29_03-27-59",
+            "content": "@@ -180,17 +180,16 @@\n .2f%5Cn%22, \n-(\n -b + mat\n@@ -193,33 +193,32 @@\n math.Sqrt(delta)\n-)\n  / 2 * a)%0A      \n@@ -240,17 +240,16 @@\n .2f%5Cn%22, \n-(\n -b - mat\n@@ -261,17 +261,16 @@\n t(delta)\n-)\n  / 2 * a\n"
+        },
+        {
+            "label": "2025-04-29_03-28-18",
+            "content": "@@ -339,16 +339,14 @@\n b / \n-(\n 2 * a)\n-)\n %0A   \n"
+        },
+        {
+            "label": "2025-04-29_03-28-30",
+            "content": "@@ -202,32 +202,30 @@\n t(delta)) / \n-(\n 2 * a)\n-)\n %0A        fmt\n@@ -268,24 +268,22 @@\n lta)) / \n-(\n 2 * a)\n-)\n %0A    %7D e\n"
+        },
+        {
+            "label": "2025-04-29_03-28-49",
+            "content": "@@ -303,10 +303,9 @@\n lta \n-==\n+%3C\n  0 %7B\n"
+        },
+        {
+            "label": "2025-04-29_03-29-20",
+            "content": "@@ -364,21 +364,8 @@\n lse \n-if delta %3C 0 \n %7B%0A  \n"
+        },
+        {
+            "label": "2025-04-29_03-31-36",
+            "content": "@@ -373,77 +373,11 @@\n lta \n-== 0 && b == 0 %7B%0A        fmt.Printf(%22%25.2f%5Cn%22, b / (2 * a))%0A    %7D else\n+%3C 0\n  %7B%0A \n"
+        },
+        {
+            "label": "2025-04-29_03-36-45",
+            "content": "@@ -305,18 +305,8 @@\n a ==\n- 0 && b ==\n  0 %7B\n@@ -335,16 +335,17 @@\n .2f%5Cn%22, \n+-\n b / (2 *\n@@ -363,32 +363,42 @@\n else if delta ==\n+ 0 && b ==\n  0 %7B%0A        fmt\n@@ -407,33 +407,32 @@\n rintf(%22%25.2f%5Cn%22, \n--\n b / (2 * a))%0A   \n"
+        },
+        {
+            "label": "2025-04-29_03-37-30",
+            "content": "package main\nimport \"fmt\"\nimport \"math\"\nfunc main() {\n    var a, b, c float64\n    fmt.Scan(&a, &b, &c)\n\n    delta := (b * b) - (4 *a * c)\n\n    if delta > 0 {\n        fmt.Printf(\"%.2f\\n\", (-b + math.Sqrt(delta)) / (2 * a))\n        fmt.Printf(\"%.2f\\n\", (-b - math.Sqrt(delta)) / (2 * a))\n    } else if delta == 0 && b == 0 {\n        fmt.Printf(\"%.2f\\n\", b / (2 * a))\n    } else if delta == 0 {\n        fmt.Printf(\"%.2f\\n\", -b / (2 * a))\n    } else {\n        fmt.Println(\"nao ha raiz real\")\n    }\n}\n"
+        }
+    ]
+}

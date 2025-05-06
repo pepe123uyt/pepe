@@ -1,0 +1,100 @@
+{
+    "patches": [
+        {
+            "label": "2025-04-27_05-46-23",
+            "content": "@@ -181,34 +181,27 @@\n    fmt.Print\n-f(%22%25f%5Cn%22, \n+ln(\n math.Ceil(x)\n@@ -200,17 +200,16 @@\n .Ceil(x)\n- \n )%0A    ca\n@@ -228,34 +228,27 @@\n    fmt.Print\n-f(%22%25f%5Cn%22, \n+ln(\n math.Floor(x\n@@ -285,18 +285,11 @@\n rint\n-f(%22%25f%5Cn%22, \n+ln(\n math\n"
+        },
+        {
+            "label": "2025-04-27_22-08-20",
+            "content": "@@ -334,16 +334,43 @@\n efault:%0A\n+        fmt.Println(%22NaN%22)%0A\n     %7D%0A%0A%7D\n"
+        },
+        {
+            "label": "2025-04-27_22-09-52",
+            "content": "@@ -181,34 +181,32 @@\n    fmt.Printf(%22%25\n-.0\n f%5Cn%22, math.Ceil(\n@@ -236,34 +236,32 @@\n    fmt.Printf(%22%25\n-.0\n f%5Cn%22, math.Floor\n@@ -304,10 +304,8 @@\n f(%22%25\n-.0\n f%5Cn%22\n"
+        },
+        {
+            "label": "2025-04-27_22-10-15",
+            "content": "@@ -10,34 +10,35 @@\n ain%0A\n-%0A\n import \n-(%0A%09\n %22fmt%22\n-%0A%09\n+ %0Aimport \n %22math%22\n-%0A)\n %0A%0Afu\n@@ -49,17 +49,20 @@\n ain() %7B%0A\n-%09\n+    \n var oper\n@@ -71,17 +71,20 @@\n or rune%0A\n-%09\n+    \n var x fl\n@@ -90,17 +90,20 @@\n loat64%0A%0A\n-%09\n+    \n fmt.Scan\n@@ -114,17 +114,20 @@\n erador)%0A\n-%09\n+    \n fmt.Scan\n@@ -132,17 +132,20 @@\n an(&x)%0A%0A\n-%09\n+    \n switch o\n@@ -154,17 +154,20 @@\n rador %7B%0A\n-%09\n+    \n case 'c'\n@@ -168,18 +168,24 @@\n se 'c':%0A\n-%09%09\n+        \n fmt.Prin\n@@ -209,19 +209,23 @@\n .Ceil(x)\n+ \n )%0A\n-%09\n+    \n case 'f'\n@@ -226,18 +226,23 @@\n se 'f':%0A\n-%09%09\n+       \n fmt.Prin\n@@ -269,17 +269,20 @@\n oor(x))%0A\n-%09\n+    \n case 'r'\n@@ -283,18 +283,24 @@\n se 'r':%0A\n-%09%09\n+        \n fmt.Prin\n@@ -327,17 +327,20 @@\n und(x))%0A\n-%09\n+    \n default:\n@@ -344,30 +344,12 @@\n lt:%0A\n-%09%09fmt.Println(%22NaN%22)%0A%09%7D\n+    %7D%0A\n %0A%7D\n-%0A\n"
+        },
+        {
+            "label": "2025-04-27_22-12-08",
+            "content": "@@ -156,34 +156,34 @@\n %0A%09%09fmt.Printf(%22%25\n-0\n .\n+0\n f%5Cn%22, math.Ceil(\n@@ -204,34 +204,34 @@\n %0A%09%09fmt.Printf(%22%25\n-0\n .\n+0\n f%5Cn%22, math.Floor\n@@ -265,10 +265,10 @@\n f(%22%25\n-0\n .\n+0\n f%5Cn%22\n"
+        },
+        {
+            "label": "2025-04-27_22-14-26",
+            "content": "@@ -294,13 +294,34 @@\n efault:%0A\n+%09%09fmt.Println(%22NaN%22)%0A\n %09%7D%0A%7D%0A\n"
+        },
+        {
+            "label": "2025-04-27_22-15-30",
+            "content": "@@ -156,34 +156,34 @@\n %0A%09%09fmt.Printf(%22%25\n-.\n 0\n+.\n f%5Cn%22, math.Ceil(\n@@ -204,34 +204,34 @@\n %0A%09%09fmt.Printf(%22%25\n-.\n 0\n+.\n f%5Cn%22, math.Floor\n@@ -265,10 +265,10 @@\n f(%22%25\n-.\n 0\n+.\n f%5Cn%22\n"
+        },
+        {
+            "label": "2025-04-27_22-56-10",
+            "content": "@@ -123,78 +123,8 @@\n x)%0A%0A\n-%09cima := math.Ceil(x)%0A%09baixo :=  math.Floor(x)%0A%09arre := math.Round(x)%0A\n %09swi\n@@ -176,12 +176,20 @@\n n%22, \n-ci\n ma\n+th.Ceil(x)\n )%0A%09c\n@@ -224,13 +224,21 @@\n n%22, \n-baixo\n+math.Floor(x)\n )%0A%09c\n@@ -273,12 +273,21 @@\n n%22, \n-arre\n+math.Round(x)\n )%0A%09d\n"
+        },
+        {
+            "label": "2025-04-27_22-59-04",
+            "content": "@@ -344,34 +344,8 @@\n t:%0A%09\n-%09fmt.Printf(%22%25.0f%5Cn%22, arre)\n+%7D\n %0A%7D%0A\n"
+        },
+        {
+            "label": "2025-04-27_23-00-08",
+            "content": "@@ -372,9 +372,6 @@\n re)%0A\n-%09%0A\n %7D%0A\n-%7D\n"
+        },
+        {
+            "label": "2025-04-27_23-00-30",
+            "content": "@@ -356,11 +356,22 @@\n ntf(\n-not\n+%22%25.0f%5Cn%22, arre\n )%0A%09%0A\n"
+        },
+        {
+            "label": "2025-04-27_23-01-16",
+            "content": "@@ -356,13 +356,11 @@\n ntf(\n-%22\n not\n-%22\n )%0A%09%0A\n"
+        },
+        {
+            "label": "2025-04-27_23-01-29",
+            "content": "@@ -353,28 +353,19 @@\n Printf(%22\n-%25.0f%5Cn%22, arre\n+not%22\n )%0A%09%0A%7D%0A%7D\n"
+        },
+        {
+            "label": "2025-04-27_23-01-56",
+            "content": "@@ -354,16 +354,24 @@\n rint\n-ln(%22NaN%22\n+f(%22%25.0f%5Cn%22, arre\n )%0A%09%0A\n"
+        },
+        {
+            "label": "2025-04-27_23-02-43",
+            "content": "@@ -350,31 +350,23 @@\n mt.Print\n-f(%22%25.0f%5Cn%22, arre\n+ln(%22NaN%22\n )%0A%09%0A%7D%0A%7D\n"
+        },
+        {
+            "label": "2025-04-27_23-03-35",
+            "content": "@@ -60,14 +60,19 @@\n  ope\n+rador\n  rune%0A\n-\n %09var\n@@ -97,16 +97,21 @@\n can(&ope\n+rador\n )%0A%09fmt.S\n@@ -193,25 +193,37 @@\n (x)%0A\n-%0A%09if ope ==\n+%09switch operador %7B%0A%09case\n  'c'\n- %7B\n+:\n %0A%09%09f\n@@ -253,30 +253,17 @@\n a)%0A%09\n-%7D else if ope ==\n+case\n  'f'\n- %7B\n+:\n %0A%09%09f\n@@ -294,30 +294,17 @@\n o)%0A%09\n-%7D else if ope ==\n+case\n  'r'\n- %7B\n+:\n %0A%09%09f\n@@ -334,22 +334,47 @@\n e)%0A%09\n-%7D else %7B%0A%09%09%0A%09%7D%0A%09\n+default:%0A%09%09fmt.Printf(%22%25.0f%5Cn%22, arre)%0A%09%0A%7D\n %0A%7D\n"
+        },
+        {
+            "label": "2025-04-27_23-07-01",
+            "content": "@@ -336,10 +336,24 @@\n rre)%0A%09%7D \n+else %7B%0A%09%09%0A%09%7D%0A%09\n %0A%7D\n"
+        },
+        {
+            "label": "2025-04-27_23-07-11",
+            "content": "@@ -77,17 +77,16 @@\n float64%0A\n-%09\n %0A%09fmt.Sc\n@@ -92,14 +92,8 @@\n can(\n-%22%25c%22, \n &ope\n"
+        },
+        {
+            "label": "2025-04-27_23-07-49",
+            "content": "@@ -77,16 +77,17 @@\n float64%0A\n+%09\n %0A%09fmt.Sc\n@@ -347,18 +347,6 @@\n %0A%09%7D \n-else %7B%0A%09%09%0A%09%7D\n %0A%7D\n"
+        },
+        {
+            "label": "2025-04-27_23-08-00",
+            "content": "@@ -92,14 +92,20 @@\n can(\n+%22%25c%22, \n &ope)%0A\n-\n %09fmt\n@@ -191,31 +191,23 @@\n )%0A%0A%09\n-switch ope %7B%0A%09case\n+if ope ==\n  'c'\n-:\n+ %7B\n %0A%09%09f\n@@ -237,17 +237,30 @@\n a)%0A%09\n-case\n+%7D else if ope ==\n  'f'\n-:\n+ %7B\n %0A%09%09f\n@@ -291,17 +291,30 @@\n o)%0A%09\n-case\n+%7D else if ope ==\n  'r'\n-:\n+ %7B\n %0A%09%09f\n@@ -344,47 +344,20 @@\n e)%0A%09\n-default:%0A%09%09fmt.Printf(%22%25.0f%5Cn%22, arre)\n+%7D else %7B%0A%09%09\n %0A%09\n-%0A\n %7D%0A%7D\n"
+        },
+        {
+            "label": "2025-04-27_23-08-47",
+            "content": "@@ -56,21 +56,16 @@\n %09var ope\n-rador\n  rune%0A%09v\n@@ -91,25 +91,13 @@\n Scan\n-f(%22%25c%22, &operador\n+(&ope\n )%0A%09f\n@@ -114,94 +114,142 @@\n )%0A%0A%09\n-if operador == 'c' %7B%0A%09%09fmt.Printf(%22%25.0f%5Cn%22, math.Ceil(x))%0A%09%7D else if operador ==\n+cima := math.Ceil(x)%0A%09baixo :=  math.Floor(x)%0A%09arre := math.Round(x)%0A%0A%09switch ope %7B%0A%09case 'c':%0A%09%09fmt.Printf(%22%25.0f%5Cn%22, cima)%0A%09case\n  'f'\n- %7B\n+:\n %0A%09%09f\n@@ -272,51 +272,25 @@\n n%22, \n-math.Floor(x))%0A%09%7D else if operador ==\n+baixo)%0A%09case\n  'r'\n- %7B\n+:\n %0A%09%09f\n@@ -313,94 +313,54 @@\n n%22, \n-math.Round(x))%0A%09%7D else %7B%0A%09%09// opcional: pode imprimir uma mensagem de erro se quiser\n+arre)%0A%09default:%0A%09%09fmt.Printf(%22%25.0f%5Cn%22, arre)\n %0A%09\n-%7D\n %0A%7D%0A\n+%7D\n"
+        },
+        {
+            "label": "2025-04-27_23-10-17",
+            "content": "@@ -94,16 +94,22 @@\n t.Scanf(\n+%22%25c%22, \n &operado\n@@ -330,14 +330,72 @@\n else %7B%0A%09\n+%09// opcional: pode imprimir uma mensagem de erro se quiser\n %0A%09%7D%0A%7D%0A\n"
+        },
+        {
+            "label": "2025-04-27_23-10-37",
+            "content": "@@ -98,14 +98,8 @@\n anf(\n-%22%25c%22, \n &ope\n"
+        },
+        {
+            "label": "2025-04-27_23-12-18",
+            "content": "package main\n\nimport (\n\t\"fmt\"\n\t\"math\"\n)\n\nfunc main() {\n\tvar operador rune\n\tvar x float64\n\n\tfmt.Scanf(\"%c\", &operador)\n\tfmt.Scan(&x)\n\n\tif operador == 'c' {\n\t\tfmt.Printf(\"%.0f\\n\", math.Ceil(x))\n\t} else if operador == 'f' {\n\t\tfmt.Printf(\"%.0f\\n\", math.Floor(x))\n\t} else if operador == 'r' {\n\t\tfmt.Printf(\"%.0f\\n\", math.Round(x))\n\t} else {\n\t\n\t}\n}\n"
+        }
+    ]
+}

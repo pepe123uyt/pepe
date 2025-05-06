@@ -1,0 +1,12 @@
+{
+    "patches": [
+        {
+            "label": "2025-04-23_03-48-36",
+            "content": "@@ -72,25 +72,15 @@\n um)%0A\n-switch %7B\n %0A    \n-case\n+if\n  num\n@@ -92,14 +92,19 @@\n == 0\n-:%0A\n+ %7B%0A   \n     \n+ \n fmt.\n@@ -127,19 +127,21 @@\n     \n-default: %7B%0A\n+%7D else %7B%0A    \n     \n@@ -160,16 +160,20 @@\n NAO%5Cn%22)%0A\n+    \n %7D%0A    %7D%0A\n@@ -173,9 +173,8 @@\n %0A    %7D%0A%0A\n-%7D\n"
+        },
+        {
+            "label": "2025-04-23_03-52-38",
+            "content": "package main\nimport \"fmt\"\nfunc main() {\n    var num int\n    fmt.Scan(&num)\nswitch {\n    case num % 7 == 0:\n    fmt.Printf(\"SIM\\n\")\n    default: {\n    fmt.Printf(\"NAO\\n\")\n}\n    }\n\n}"
+        }
+    ]
+}

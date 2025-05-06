@@ -1,0 +1,52 @@
+{
+    "patches": [
+        {
+            "label": "2025-04-27_04-54-30",
+            "content": "@@ -202,19 +202,15 @@\n  if \n+(\n z =\n-=\n  y\n- && y\n+)\n  == \n"
+        },
+        {
+            "label": "2025-04-27_04-55-45",
+            "content": "@@ -73,16 +73,18 @@\n y, &z)%0A%0A\n+%0A%0A\n if x == \n@@ -85,20 +85,50 @@\n  x == y \n-&& y\n+%7B%0A    fmt.Println(%222%22)%0A%7D else if x\n  == z %7B%0A\n@@ -148,15 +148,13 @@\n ln(%22\n-3\n+2\n %22)%0A%7D\n-  \n  els\n@@ -162,25 +162,15 @@\n  if \n-x\n+z\n  == y \n-&& y != z \n %7B%0A  \n@@ -185,26 +185,24 @@\n intln(%222%22)%0A%7D\n-  \n  else if z =\n@@ -214,9 +214,9 @@\n & y \n-!\n+=\n = x \n@@ -238,15 +238,13 @@\n ln(%22\n-2\n+3\n %22)%0A%7D\n-  \n  els\n@@ -268,16 +268,17 @@\n ln(%220%22)%0A\n+%0A\n %7D%0A%0A%0A%0A%0A%7D%0A\n"
+        },
+        {
+            "label": "2025-04-27_04-59-59",
+            "content": "@@ -78,17 +78,17 @@\n )%0A%0Aif x \n-!\n+=\n = y && y\n@@ -104,33 +104,33 @@\n    fmt.Println(%22\n-2\n+3\n %22)%0A%7D   else if x\n@@ -182,17 +182,17 @@\n se if z \n-!\n+=\n = y && y\n@@ -220,9 +220,9 @@\n ln(%22\n-0\n+2\n %22)%0A%7D\n@@ -244,24 +244,24 @@\n mt.Println(%22\n-3\n+0\n %22)%0A%7D%0A%0A%0A%0A%0A%7D%0A\n"
+        },
+        {
+            "label": "2025-04-27_05-01-53",
+            "content": "@@ -224,59 +224,8 @@\n 0%22)%0A\n-%7D   else if x == z && z != y%7B%0A    fmt.Println(%222%22)%0A\n %7D   \n"
+        },
+        {
+            "label": "2025-04-27_05-03-21",
+            "content": "@@ -82,13 +82,23 @@\n f x \n-=\n+!\n = y \n+&& y == z \n %7B%0A  \n@@ -132,16 +132,26 @@\n  if x ==\n+ y && y !=\n  z %7B%0A   \n@@ -232,22 +232,32 @@\n else if \n-y\n+x\n  == z\n+ && z != y\n %7B%0A    fm\n"
+        },
+        {
+            "label": "2025-04-27_05-06-15",
+            "content": "@@ -57,16 +57,18 @@\n fmt.Scan\n+ln\n (&x, &y,\n"
+        },
+        {
+            "label": "2025-04-27_05-06-37",
+            "content": "@@ -80,22 +80,12 @@\n f x \n-!= y && y \n == \n-z\n+y\n  %7B%0A \n@@ -120,26 +120,16 @@\n  if x ==\n- y && y !=\n  z %7B%0A   \n@@ -214,24 +214,14 @@\n  if \n-x\n+y\n  == z\n- && z != y\n %7B%0A  \n"
+        },
+        {
+            "label": "2025-04-27_05-07-10",
+            "content": "@@ -246,17 +246,16 @@\n & z != y\n- \n %7B%0A    fm\n"
+        },
+        {
+            "label": "2025-04-27_05-07-31",
+            "content": "@@ -233,24 +233,34 @@\n e if x == z \n+&& z != y \n %7B%0A    fmt.Pr\n"
+        },
+        {
+            "label": "2025-04-27_05-08-32",
+            "content": "@@ -241,17 +241,8 @@\n = z \n-&& x != y\n %7B%0A  \n"
+        },
+        {
+            "label": "2025-04-27_05-09-17",
+            "content": "@@ -196,18 +196,8 @@\n y !=\n- x && z !=\n  x %7B\n"
+        },
+        {
+            "label": "2025-04-27_05-10-19",
+            "content": "package main\nimport \"fmt\"\nfunc main() {\nvar x, y, z int\nfmt.Scan(&x, &y, &z)\n\nif x != y && y == z {\n    fmt.Println(\"2\")\n}   else if x == y && y != z {\n    fmt.Println(\"2\")\n}   else if z != y && y != x && z != x {\n    fmt.Println(\"0\")\n}   else if x == z && x != y{\n    fmt.Println(\"2\")\n}   else {\n    fmt.Println(\"3\")\n}\n\n\n\n\n}\n"
+        }
+    ]
+}

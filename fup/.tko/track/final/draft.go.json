@@ -1,0 +1,36 @@
+{
+    "patches": [
+        {
+            "label": "2025-04-28_19-02-38",
+            "content": "@@ -317,33 +317,24 @@\n ln(%22aprovado\n- na final\n %22)%0A        %7D\n@@ -379,17 +379,8 @@\n vado\n- na final\n %22)%0A \n"
+        },
+        {
+            "label": "2025-04-28_19-03-18",
+            "content": "@@ -101,99 +101,48 @@\n ota2\n-)%0A%0A    media := (nota1 + nota2) / 2%0A    mediafinal := (media + nota_final) / 2%0A    if media\n+, &nota_final)%0A%0A    if nota1 + nota2 / 2\n  %3E= \n@@ -190,21 +190,33 @@\n else if \n-media\n+nota1 + nota2 / 2\n  %3C 4%7B%0A  \n@@ -271,46 +271,16 @@\n     \n-fmt.Scan(&nota_final)%0A        if media\n+if nota_\n fina\n"
+        },
+        {
+            "label": "2025-04-28_19-07-16",
+            "content": "@@ -421,26 +421,8 @@\n lse \n-if mediafinal %3C 5 \n %7B%0A  \n"
+        },
+        {
+            "label": "2025-04-28_19-07-31",
+            "content": "@@ -409,32 +409,50 @@\n %0A        %7D else \n+if mediafinal %3C 5 \n %7B%0A            fm\n"
+        },
+        {
+            "label": "2025-04-28_19-10-16",
+            "content": "@@ -300,35 +300,8 @@\n lse \n-if media %3E= 4 && media %3C 7 \n %7B%0A  \n"
+        },
+        {
+            "label": "2025-04-28_19-13-14",
+            "content": "@@ -378,16 +378,17 @@\n afinal %3E\n+=\n  5 %7B%0A   \n"
+        },
+        {
+            "label": "2025-04-28_19-14-56",
+            "content": "@@ -137,16 +137,54 @@\n / 2%0A    \n+mediafinal := (media + nota_final) / 2\n %0A    if \n@@ -366,21 +366,21 @@\n      if \n-nota_\n+media\n final %3E \n"
+        },
+        {
+            "label": "2025-04-28_19-15-37",
+            "content": "package main\nimport \"fmt\"\nfunc main() {\n    var nota1, nota2, nota_final int\n    fmt.Scan(&nota1, &nota2)\n\n    media := (nota1 + nota2) / 2\n    \n    if media >= 7{\n        fmt.Println(\"aprovado\")\n    } else if media < 4{\n        fmt.Println(\"reprovado\")\n    } else if media >= 4 && media < 7 {\n        fmt.Scan(&nota_final)\n        if nota_final > 5 {\n            fmt.Println(\"aprovado na final\")\n        } else {\n            fmt.Println(\"reprovado na final\")\n        }\n    }\n}\n\n\n\n"
+        }
+    ]
+}

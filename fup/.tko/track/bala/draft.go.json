@@ -1,0 +1,16 @@
+{
+    "patches": [
+        {
+            "label": "2025-04-23_03-11-21",
+            "content": "@@ -140,17 +140,16 @@\n loat64((\n-(\n xa-xb)*(\n@@ -158,13 +158,11 @@\n -xb)\n-)\n  + \n-(\n (ya-\n@@ -174,17 +174,16 @@\n ya-yb)))\n-)\n %0A%0A    fm\n"
+        },
+        {
+            "label": "2025-04-23_03-12-21",
+            "content": "@@ -74,15 +74,11 @@\n  yb \n-float64\n+int\n %0A   \n@@ -131,16 +131,24 @@\n th.Sqrt(\n+float64(\n ((xa-xb)\n@@ -177,16 +177,17 @@\n ya-yb)))\n+)\n %0A%0A    fm\n"
+        },
+        {
+            "label": "2025-04-23_03-13-05",
+            "content": "package main\nimport \"fmt\"\nimport \"math\"\nfunc main() {\n    var xa, ya, xb, yb float64\n    fmt.Scan(&xa, &ya, &xb, &yb)\n\n    dista := math.Sqrt(((xa-xb)*(xa-xb)) + ((ya-yb)*(ya-yb)))\n\n    fmt.Printf(\"%.2f\\n\", dista)\n\n}\n"
+        }
+    ]
+}

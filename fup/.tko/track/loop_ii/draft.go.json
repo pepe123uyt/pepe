@@ -1,0 +1,56 @@
+{
+    "patches": [
+        {
+            "label": "2025-04-28_20-01-18",
+            "content": "@@ -128,11 +128,9 @@\n tln(\n-%5Ba%5D\n+a\n )%0A  \n"
+        },
+        {
+            "label": "2025-04-28_20-02-01",
+            "content": "@@ -84,15 +84,29 @@\n for \n-range b\n+a := a; a %3C b; a += 0\n  %7B%0A \n@@ -124,17 +124,19 @@\n Println(\n-a\n+%5Ba%5D\n )%0A    %7D%0A\n"
+        },
+        {
+            "label": "2025-04-28_20-07-25",
+            "content": "@@ -94,22 +94,8 @@\n b %7B%0A\n-        a %3C b%0A\n     \n@@ -107,16 +107,18 @@\n mt.Print\n+ln\n (a)%0A    \n"
+        },
+        {
+            "label": "2025-04-28_20-08-42",
+            "content": "@@ -90,16 +90,30 @@\n nge b %7B%0A\n+        a %3C b%0A\n         \n"
+        },
+        {
+            "label": "2025-04-28_20-08-55",
+            "content": "@@ -112,11 +112,9 @@\n int(\n-%5Ba%5D\n+a\n )%0A  \n"
+        },
+        {
+            "label": "2025-04-28_20-09-04",
+            "content": "@@ -112,13 +112,11 @@\n int(\n-'\n %5Ba%5D\n-'\n )%0A  \n"
+        },
+        {
+            "label": "2025-04-28_20-09-39",
+            "content": "@@ -84,29 +84,15 @@\n for \n-a := a; a %3C b; a += 1\n+range b\n  %7B%0A \n@@ -108,17 +108,21 @@\n t.Print(\n-a\n+'%5Ba%5D'\n )%0A    %7D%0A\n"
+        },
+        {
+            "label": "2025-04-28_20-10-57",
+            "content": "@@ -75,27 +75,8 @@\n &b)%0A\n-    fmt.Print(%22%5B %22)\n %0A   \n@@ -125,17 +125,9 @@\n rint\n-f(%22%25v %22, \n+(\n a)%0A \n"
+        },
+        {
+            "label": "2025-04-28_20-12-13",
+            "content": "@@ -162,28 +162,5 @@\n   %7D%0A\n-    fmt.Println(%22%5D %22)%0A%0A\n %7D\n"
+        },
+        {
+            "label": "2025-04-28_20-12-56",
+            "content": "@@ -171,16 +171,18 @@\n mt.Print\n+ln\n (%22%5D %22)%0A%0A\n"
+        },
+        {
+            "label": "2025-04-28_20-13-12",
+            "content": "@@ -174,13 +174,14 @@\n Print(%22%5D\n+ \n %22)%0A%0A%7D\n"
+        },
+        {
+            "label": "2025-04-28_20-13-28",
+            "content": "@@ -178,10 +178,8 @@\n t(%22%5D\n-%5Cn\n %22)%0A%0A\n"
+        },
+        {
+            "label": "2025-04-28_20-14-08",
+            "content": "package main\nimport \"fmt\"\nfunc main() {\n    var a, b int\n    fmt.Scan(&a, &b)\n    fmt.Print(\"[ \")\n    for a := a; a < b; a += 1 {\n        fmt.Printf(\"%v \", a)\n    }\n    fmt.Print(\"]\\n\")\n\n}"
+        }
+    ]
+}

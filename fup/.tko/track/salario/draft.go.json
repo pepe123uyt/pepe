@@ -1,0 +1,12 @@
+{
+    "patches": [
+        {
+            "label": "2025-04-29_18-55-26",
+            "content": "@@ -150,17 +150,17 @@\n lario * \n-1\n+0\n .2)%0A    \n@@ -226,17 +226,17 @@\n lario * \n-1\n+0\n .15)%0A   \n@@ -303,17 +303,17 @@\n lario * \n-1\n+0\n .1)%0A    \n@@ -378,17 +378,17 @@\n lario * \n-1\n+0\n .05)%0A   \n"
+        },
+        {
+            "label": "2025-04-29_18-55-54",
+            "content": "package main\nimport \"fmt\"\nfunc main() {\n    var salario float64\n    fmt.Scan(&salario) \n    \n    if salario <= 1000 {\n        fmt.Printf(\"%.2f\\n\", salario * 1.2)\n    } else if salario <= 1500 {\n        fmt.Printf(\"%.2f\\n\", salario * 1.15)\n    } else if salario <= 2000 {\n        fmt.Printf(\"%.2f\\n\", salario * 1.1)\n    } else if salario > 2000 {\n        fmt.Printf(\"%.2f\\n\", salario * 1.05)\n    }\n}\n"
+        }
+    ]
+}

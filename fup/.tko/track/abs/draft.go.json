@@ -1,0 +1,24 @@
+{
+    "patches": [
+        {
+            "label": "2025-04-23_03-22-47",
+            "content": "@@ -64,17 +64,16 @@\n rn  (a -\n- \n b) * (-1\n"
+        },
+        {
+            "label": "2025-04-23_03-23-06",
+            "content": "@@ -19,17 +19,16 @@\n t %22fmt%22%0A\n-%0A\n func abs\n@@ -52,27 +52,8 @@\n t %7B%0A\n-    if a %3C b %7B%0A    \n     \n@@ -63,14 +63,15 @@\n urn \n-(b - a\n+ (a - b\n ) * \n@@ -79,58 +79,8 @@\n -1)%0A\n-    %7D%0A    if a %3E b %7B%0A        return (a - b)%0A    %7D%0A\n %7D%0A%0Af\n"
+        },
+        {
+            "label": "2025-04-23_03-25-23",
+            "content": "@@ -148,21 +148,8 @@\n   %7D%0A\n-    return 0%0A\n %7D%0A%0Af\n"
+        },
+        {
+            "label": "2025-04-23_03-26-47",
+            "content": "@@ -80,21 +80,21 @@\n return (\n-a - b\n+b - a\n ) * (-1)\n@@ -144,17 +144,16 @@\n )%0A    %7D%0A\n-%0A\n     retu\n"
+        },
+        {
+            "label": "2025-04-23_03-27-28",
+            "content": "package main\nimport \"fmt\"\n\nfunc abs(a int, b int) int {\n    if a < b {\n        return (a - b) * (-1)\n    }\n    if a > b {\n        return (a - b)\n    }\n\n    return 0\n}\n\nfunc main() {\n    var a, b int\n    fmt.Scan(&a, &b)\n\n    fmt.Printf(\"%d\\n\", abs (a, b))\n\n}\n"
+        }
+    ]
+}

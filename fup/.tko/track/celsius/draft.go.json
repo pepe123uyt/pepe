@@ -1,0 +1,8 @@
+{
+    "patches": [
+        {
+            "label": "2025-04-23_02-49-11",
+            "content": "package main\nimport \"fmt\"\nfunc main() {\n    \n    var cel float64\n    fmt.Scan(&cel)\n    \n    fahr :=  cel * 1.8 + 32\n    \n    fmt.Printf(\"%.6f\\n\", fahr)\n\n\n}\n"
+        }
+    ]
+}

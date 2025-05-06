@@ -1,0 +1,8 @@
+{
+    "patches": [
+        {
+            "label": "2025-05-05_19-10-16",
+            "content": "package main\nimport \"fmt\"\nfunc main() {\n    var inf, sup int\n    fmt.Scan(&inf, &sup)\n    var soma int\n    if inf > sup {\n        fmt.Println(\"invalido\")\n        return\n    }\n    for i := inf; i < sup + 1; i++ {\n        if i % 2 == 0 {\n            soma += 1\n        }\n    }\n}\n"
+        }
+    ]
+}

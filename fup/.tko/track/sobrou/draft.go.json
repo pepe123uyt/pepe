@@ -1,0 +1,64 @@
+{
+    "patches": [
+        {
+            "label": "2025-04-16_20-00-18",
+            "content": "@@ -36,271 +36,8 @@\n () %7B\n-%0A%0A    var n1, n2, n3 float64%0A    var v1, v2, v3, qd, valortotal, troco float64%0A%0A    fmt.Scan(n1, n2, n3)%0A    fmt.Scan(v1, v2, v3)%0A    fmt.Scan(qd)%0A%0A    valortotal = (n1 * v1) + (n2 * v2)+ (n3 * v3)%0A    troco = qd - valortotal%0A%0A    fmt.Printf(%22%25.2f%22, troco)%0A%0A%0A%0A%0A%0A%0A\n %0A   \n"
+        },
+        {
+            "label": "2025-04-16_20-18-35",
+            "content": "@@ -1,10 +1,8 @@\n-%0A%0A\n package \n@@ -46,41 +46,56 @@\n var \n-x, y, z int%0A    var xv,  yv, zv, \n+n1, n2, n3 float64%0A    var v1, v2, v3, qd, valor\n tota\n@@ -106,18 +106,8 @@\n roco\n-, dinheiro\n  flo\n@@ -129,15 +129,18 @@\n can(\n-x, y, z\n+n1, n2, n3\n )%0A  \n@@ -154,19 +154,18 @@\n can(\n-xv,  yv, zv\n+v1, v2, v3\n )%0A  \n@@ -179,82 +179,62 @@\n can(\n+q\n d\n-inheiro\n )%0A%0A    \n+valor\n total =\n-float64(x) * xv + float64(y) * yv + float64(z) * zv%0A\n+ (n1 * v1) + (n2 * v2)+ (n3 * v3)\n %0A   \n@@ -246,19 +246,18 @@\n o = \n-dinheiro - \n+qd - valor\n tota\n@@ -291,15 +291,41 @@\n roco)%0A%0A%0A\n-    \n+%0A%0A%0A%0A%0A    fmt.Println(%22qxcode%22)\n %0A%7D%0A\n"
+        },
+        {
+            "label": "2025-04-20_20-41-19",
+            "content": "@@ -76,16 +76,30 @@\n  yv, zv,\n+ total, troco,\n  dinheir\n@@ -191,19 +191,17 @@\n   total \n-:= \n+=\n float64(\n@@ -259,9 +259,8 @@\n oco \n-:\n = di\n"
+        },
+        {
+            "label": "2025-04-20_20-44-18",
+            "content": "@@ -1,312 +1,846 @@\n-%0A%0Apackage main%0Aimport %22fmt%22%0Afunc main() %7B%0A%0A    var x, y, z int%0A    var xv,  yv, zv, dinheiro float64%0A%0A    fmt.Scan(x, y, z)%0A    fmt.Scan(xv,  yv, zv)%0A    fmt.Scan(dinheiro)%0A%0A    total := float64(x) * xv + float64(y) * yv + float64(z) * zv%0A%0A    troco := dinheiro - total%0A%0A    fmt.Printf(%22%25.2f%5Cn%22, troco)%0A%0A%0A    %0A%7D\n+@@ -1,10 +1,34 @@%0A-%250A%250A%0A+@@ -1,312 +1,43 @@%250A-%25250A%25250A%0A package %0A@@ -35,22 +35,30 @@%0A main%0A-%250A%0A+%25250A%0A import %0A-%2522fmt%2522%250A%0A+%252522fmt%252522%25250A%0A func%0A@@ -69,11 +69,17 @@%0A n() %0A-%257B%250A%250A%0A+%25257B%25250A%25250A%0A     %0A@@ -93,17 +93,19 @@%0A y, z int%0A-%250A%0A+%25250A%0A     var %0A@@ -133,18 +133,22 @@%0A  float64%0A-%250A%250A%0A+%25250A%25250A%0A     fmt.%0A@@ -160,17 +160,19 @@%0A x, y, z)%0A-%250A%0A+%25250A%0A     fmt.%0A@@ -188,17 +188,19 @@%0A  yv, zv)%0A-%250A%0A+%25250A%0A     fmt.%0A@@ -213,18 +213,22 @@%0A inheiro)%0A-%250A%250A%0A+%25250A%25250A%0A     tota%0A@@ -283,18 +283,22 @@%0A (z) * zv%0A-%250A%250A%0A+%25250A%25250A%0A     troc%0A@@ -318,18 +318,22 @@%0A  - total%0A-%250A%250A%0A+%25250A%25250A%0A     fmt.%0A@@ -343,30 +343,109 @@%0A ntf(%0A-%2522%2525.2f%255Cn%2522, troco)%250A%250A%250A    %250A%257D%0A+%252522%252525.2f%25255Cn%252522, troco)%25250A%25250A%25250A    %25250A%25257D%250A+@@ -288,10 +288,8 @@%25250A %25252525.2f%25250A-%2525255Cn%25250A %25252522, t%250A %25250A%0A %250A\n %0A\n"
+        },
+        {
+            "label": "2025-04-20_20-44-50",
+            "content": "@@ -233,16 +233,47 @@\n ) * zv%0A%0A\n+    troco := dinheiro - total%0A%0A\n     fmt.\n@@ -288,27 +288,18 @@\n %25.2f\n+%5Cn\n %22, \n-dinheiro - total\n+troco\n )%0A%0A%0A\n"
+        },
+        {
+            "label": "2025-04-20_20-46-20",
+            "content": "@@ -64,24 +64,27 @@\n     var \n-a,  b, c\n+xv,  yv, zv\n , dinhei\n@@ -134,16 +134,19 @@\n can(\n-a,  b, c\n+xv,  yv, zv\n )%0A  \n@@ -193,17 +193,18 @@\n 64(x) * \n-a\n+xv\n  + float\n@@ -215,9 +215,10 @@\n ) * \n-b\n+yv\n  + f\n@@ -229,17 +229,18 @@\n 64(z) * \n-c\n+zv\n %0A%0A    fm\n"
+        },
+        {
+            "label": "2025-04-20_21-27-58",
+            "content": "@@ -110,20 +110,14 @@\n an(x\n-%5Cn\n , y\n-%5Cn\n , z\n-%5Cn\n )%0A  \n@@ -132,21 +132,15 @@\n an(a\n-%5Cn\n ,  b\n-%5Cn\n , c\n-%5Cn\n )%0A  \n@@ -185,12 +185,12 @@\n at64\n- \n (x)\n+ \n * a \n@@ -198,17 +198,16 @@\n  float64\n- \n (y) * b \n@@ -215,17 +215,16 @@\n  float64\n- \n (z) * c%0A\n"
+        },
+        {
+            "label": "2025-04-20_21-30-33",
+            "content": "@@ -70,29 +70,15 @@\n r a,\n+ \n  b, c\n- float64%0A    var\n+,\n  din\n@@ -109,91 +109,75 @@\n can(\n-&dinheiro)%0A    fmt.Scan(&x, &y, &z)%0A    fmt.Scan(&a, &b, &c)%0A%0A    var total float64\n+x%5Cn, y%5Cn, z%5Cn)%0A    fmt.Scan(a%5Cn,  b%5Cn, c%5Cn)%0A    fmt.Scan(dinheiro)%0A\n %0A   \n@@ -187,116 +187,61 @@\n tal \n+:\n = \n-(\n float64\n+ \n (x)\n- \n * a\n-)\n  + \n-(\n float64\n+ \n (y) * b\n-)\n  + \n-(\n float64\n+ \n (z) * c\n-)%0A%0A    var troco float64%0A    troco = dinheiro - total\n %0A%0A  \n@@ -258,34 +258,33 @@\n tf(%22\n-Total: R$ \n %25.2f\n-%5Cn\n %22,\n+ dinheiro -\n  total)%0A\n     \n@@ -279,15 +279,17 @@\n  total)%0A\n+%0A%0A\n     %0A%7D%0A\n"
+        },
+        {
+            "label": "2025-04-20_21-35-19",
+            "content": "@@ -279,15 +279,36 @@\n     \n+var \n troco \n-:\n+float64%0A    troco \n = di\n@@ -322,16 +322,17 @@\n - total%0A\n+%0A\n     fmt.\n@@ -339,16 +339,26 @@\n Printf(%22\n+Total: R$ \n %25.2f%5Cn%22,\n@@ -359,20 +359,20 @@\n 2f%5Cn%22, t\n-roco\n+otal\n )%0A    %0A%7D\n"
+        },
+        {
+            "label": "2025-04-21_20-25-03",
+            "content": "@@ -48,51 +48,51 @@\n var \n-qtd1, qtd2, qtd3 int%0A%09var val1, val2, val3,\n+x, y, z int%0A    var a, b, c float64%0A    var\n  din\n@@ -106,25 +106,28 @@\n loat64%0A%0A\n-%09\n+    \n fmt.Scan\n ln(&qtd1\n@@ -122,157 +122,114 @@\n Scan\n-ln\n (&\n-qtd1)%0A%09fmt.Scanln(&qtd2)%0A%09fmt.Scanln(&qtd3)%0A%0A%09fmt.Scanln(&val1)%0A%09fmt.Scanln(&val2)%0A%09fmt.Scanln(&val3)%0A%0A%09fmt.Scanln(&dinheiro)%0A%0A%09\n+dinheiro)%0A    fmt.Scan(&x, &y, &z)%0A    fmt.Scan(&a, &b, &c)%0A%0A    var total float64%0A    \n total \n-:\n = \n+(\n float64(\n qtd1\n@@ -228,29 +228,27 @@\n t64(\n-qtd1)*val1\n+x) * a)\n  + \n+(\n float64(\n qtd2\n@@ -247,29 +247,27 @@\n t64(\n-qtd2)*val2\n+y) * b)\n  + \n+(\n float64(\n qtd3\n@@ -266,21 +266,21 @@\n t64(\n-qtd3)*val3%0A%0A%09\n+z) * c)%0A%0A    \n troc\n@@ -309,10 +309,8 @@\n     \n-%0A%09\n fmt.\n"
+        },
+        {
+            "label": "2025-04-21_20-28-26",
+            "content": "@@ -1,8 +1,10 @@\n+%0A%0A\n package \n@@ -8,17 +8,16 @@\n ge main%0A\n-%0A\n import %22\n@@ -21,17 +21,16 @@\n t %22fmt%22%0A\n-%0A\n func mai\n@@ -40,20 +40,32 @@\n  %7B%0A%0A\n-%09var a, b, c\n+    var qtd1, qtd2, qtd3\n  int\n@@ -76,16 +76,32 @@\n r va\n+l1\n , v\n-b, vc\n+al2, val3, dinheiro\n  flo\n@@ -122,9 +122,272 @@\n nln(\n-)%0A\n+&qtd1)%0A%09fmt.Scanln(&qtd2)%0A%09fmt.Scanln(&qtd3)%0A%0A%09fmt.Scanln(&val1)%0A%09fmt.Scanln(&val2)%0A%09fmt.Scanln(&val3)%0A%0A%09fmt.Scanln(&dinheiro)%0A%0A%09total := float64(qtd1)*val1 + float64(qtd2)*val2 + float64(qtd3)*val3%0A%0A%09troco := dinheiro - total%0A    %0A%09fmt.Printf(%22%25.2f%5Cn%22, troco)%0A    \n %0A%7D%0A\n"
+        },
+        {
+            "label": "2025-04-22_18-44-51",
+            "content": "@@ -57,30 +57,8 @@\n int%0A\n-%09fmt.Scan(&a, &b, &c)%0A\n %09var\n@@ -81,188 +81,22 @@\n t64%0A\n-%09fmt.Scan(&va, &vb, &vc)%0A%09var dinheiro float64%0A%09fmt.Scan(&dinheiro)%0A%0A%09total:= float64(a)*va + float64(b)*vb + float64(c)*vc%0A%09troco:= dinheiro - total%0A%0A%09fmt.Printf(%22%25.2f%5Cn%22, troco)%0A\n+%0A%09fmt.Scanln()\n %0A%0A%7D%0A\n"
+        },
+        {
+            "label": "2025-04-22_19-25-02",
+            "content": "@@ -224,16 +224,41 @@\n (c)*vc%0A%09\n+troco:= dinheiro - total%0A\n %0A%09fmt.Pr\n@@ -272,30 +272,19 @@\n .2f%5Cn%22, \n-dinheiro - total\n+troco\n )%0A%0A%0A%7D%0A\n"
+        },
+        {
+            "label": "2025-04-22_19-25-48",
+            "content": "@@ -269,9 +269,8 @@\n al)%0A%0A%0A%7D%0A\n- \n"
+        },
+        {
+            "label": "2025-04-22_19-33-48",
+            "content": "package main\n\nimport \"fmt\"\n\nfunc main() {\n\n\tvar a, b, c int\n\tfmt.Scan(&a, &b, &c)\n\tvar va, vb, vc float64\n\tfmt.Scan(&va, &vb, &vc)\n\tvar dinheiro float64\n\tfmt.Scan(&dinheiro)\n\n\ttotal:= float64(a)*va + float64(b)*vb + float64(c)*vc\n\t\n\tfmt.Printf(\"%.2f\\n\", dinheiro - total)\n\n\n}\n "
+        }
+    ]
+}

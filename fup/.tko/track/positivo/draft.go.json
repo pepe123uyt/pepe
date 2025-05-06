@@ -1,0 +1,12 @@
+{
+    "patches": [
+        {
+            "label": "2025-04-23_03-32-49",
+            "content": "@@ -34,16 +34,20 @@\n ain() %7B%0A\n+    \n %0A     va\n@@ -174,9 +174,10 @@\n      %7D%0A%0A\n+%7D\n %0A\n"
+        },
+        {
+            "label": "2025-04-23_03-33-20",
+            "content": "package main\nimport \"fmt\"\n\nfunc main() {\n\n     var x int\n     fmt.Scan(&x)\n     if x >= 0 {\n        fmt.Printf(\"SIM\\n\")\n     } else {\n        fmt.Printf(\"NAO\\n\")\n     }\n     }\n\n\n"
+        }
+    ]
+}

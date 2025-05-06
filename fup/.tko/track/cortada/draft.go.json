@@ -1,0 +1,68 @@
+{
+    "patches": [
+        {
+            "label": "2025-04-29_03-56-55",
+            "content": "@@ -192,33 +192,32 @@\n    if trapesio %3E\n-=\n  5200 && t %3E b %7B\n@@ -266,17 +266,16 @@\n apesio %3E\n-=\n  5200 &&\n"
+        },
+        {
+            "label": "2025-04-29_03-57-08",
+            "content": "@@ -157,16 +157,17 @@\n 0 * \n+(\n (160 - b\n  + 1\n@@ -166,18 +166,21 @@\n  - b\n+)\n  + \n+(\n 160 - t\n+)\n  / 2\n"
+        },
+        {
+            "label": "2025-04-29_03-59-21",
+            "content": "@@ -188,32 +188,33 @@\n    if trapesio %3E\n+=\n  5200 && t %3E b %7B\n@@ -263,16 +263,17 @@\n apesio %3E\n+=\n  5200 &&\n"
+        },
+        {
+            "label": "2025-04-29_03-59-33",
+            "content": "@@ -148,16 +148,21 @@\n sio := (\n+70 * \n (160 - b\n@@ -180,13 +180,8 @@\n / 2)\n- * 70\n )%0A%0A \n"
+        },
+        {
+            "label": "2025-04-29_04-00-18",
+            "content": "@@ -182,31 +182,8 @@\n 70)%0A\n-    area := (160 * 70) \n %0A   \n@@ -193,32 +193,28 @@\n  trapesio %3E \n-area / 2\n+5200\n  && t %3E b %7B%0A\n@@ -267,16 +267,12 @@\n o %3E \n-area / 2\n+5200\n  && \n"
+        },
+        {
+            "label": "2025-04-29_04-03-01",
+            "content": "@@ -153,15 +153,25 @@\n = ((\n-(b + t)\n+160 - b + 160 - t\n  / 2\n"
+        },
+        {
+            "label": "2025-04-29_04-03-55",
+            "content": "@@ -149,16 +149,17 @@\n io := ((\n+(\n b + t) /\n@@ -160,16 +160,17 @@\n + t) / 2\n+)\n  * 70)%0A \n"
+        },
+        {
+            "label": "2025-04-29_04-04-13",
+            "content": "@@ -170,16 +170,35 @@\n 70)%0A    \n+area := (160 * 70) \n %0A    if \n@@ -204,28 +204,32 @@\n  trapesio %3E \n-5600\n+area / 2\n  && t %3E b %7B%0A\n@@ -282,12 +282,16 @@\n o %3E \n-5600\n+area / 2\n  && \n"
+        },
+        {
+            "label": "2025-04-29_04-05-22",
+            "content": "@@ -163,15 +163,19 @@\n  / 2\n-)\n  * 70\n-%0A\n+)%0A    \n %0A   \n"
+        },
+        {
+            "label": "2025-04-29_04-05-57",
+            "content": "@@ -176,33 +176,32 @@\n    if trapesio %3E\n-=\n  5600 && t %3E b %7B\n@@ -250,17 +250,16 @@\n apesio %3E\n-=\n  5600 &&\n"
+        },
+        {
+            "label": "2025-04-29_04-06-32",
+            "content": "@@ -160,17 +160,17 @@\n  t) \n-* 70) / 2\n+/ 2) * 70\n %0A%0A  \n@@ -176,32 +176,33 @@\n    if trapesio %3E\n+=\n  5600 && t %3E b %7B\n@@ -251,16 +251,17 @@\n apesio %3E\n+=\n  5600 &&\n"
+        },
+        {
+            "label": "2025-04-29_04-07-20",
+            "content": "@@ -197,13 +197,13 @@\n  && \n-b %3C t\n+t %3E b\n  %7B%0A \n"
+        },
+        {
+            "label": "2025-04-29_04-07-50",
+            "content": "@@ -170,38 +170,8 @@\n / 2%0A\n-    media_nota := 160 * 70 / 2\n %0A   \n@@ -181,34 +181,28 @@\n  trapesio %3E \n-media_nota\n+5600\n  && b %3C t %7B%0A\n@@ -255,18 +255,12 @@\n o %3E \n-media_nota\n+5600\n  && \n"
+        },
+        {
+            "label": "2025-04-29_18-47-50",
+            "content": "@@ -387,35 +387,7 @@\n     \n-switch %7B%0A    case 1 : %0A    %7D\n %0A%7D%0A\n"
+        },
+        {
+            "label": "2025-05-05_18-27-35",
+            "content": "@@ -72,16 +72,74 @@\n &b, &t)%0A\n+    // comprimento 160 cent%C3%ADmetros e altura 70 cent%C3%ADmetros\n %0A    tra\n@@ -379,11 +379,43 @@\n  %0A    %7D%0A\n+    switch %7B%0A    case 1 : %0A    \n %7D%0A\n+%7D\n %0A\n"
+        },
+        {
+            "label": "2025-05-05_18-28-25",
+            "content": "package main\nimport \"fmt\"\nfunc main() {\n    var b, t int \n    fmt.Scan(&b, &t)\n\n    trapesio := ((b + t) * 70) / 2\n    media_nota := 160 * 70 / 2\n    if trapesio > media_nota && b < t {\n        fmt.Println(\"1\")\n    } else if trapesio > media_nota && b > t {\n        fmt.Println(\"2\")\n    } else {\n        fmt.Println(\"0\") \n    }\n}\n\n"
+        }
+    ]
+}
